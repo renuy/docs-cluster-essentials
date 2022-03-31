@@ -8,5 +8,5 @@ This repository contains the content for Cluster Essentials for VMware Tanzu.
 
 | Branch | Usage |
 |--------|-------|
-| main | Development branch, publishes to: https://docs-staging.vmware.com/en/draft/Tanzu-Application-Platform/1.1/tap/GUID-overview.html |
+| main | Development branch, publishes to:  |
 
