@@ -1,0 +1,15 @@
+publication:
+    RootMapFile: toc.md
+    OutputFileName: cluster-essentials
+    PublicationName: Cluster Essentials for VMware Tanzu
+    ProductName: Cluster Essentials for VMware Tanzu
+    ProductVersion: 1.1
+    PublicationVersion: 1.1
+    PublicationVersionComments: Cluster Essentials for VMware Tanzu
+    Language: en
+    PublicationGuid: id
+    PublicationKeywords: Cluster Essentials for VMware Tanzu
+    BatchProcessingInstruction:
+    PDFLink: 
+    WordLink:
+    PublicationAuthor: yugrinov@vmware.com
