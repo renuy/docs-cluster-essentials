@@ -29,9 +29,7 @@ For all other clusters, install Cluster Essentials using the following steps.
     tar -xvf DOWNLOADED-CLUSTER-ESSENTIALS-BUNDLE -C $HOME/tanzu-cluster-essentials
     ```
 
-    Where:
-
-    - `DOWNLOADED-CLUSTER-ESSENTIALS-BUNDLE` is the name of the cluster essentials package you downloaded.
+    Where `DOWNLOADED-CLUSTER-ESSENTIALS-BUNDLE` is the name of the bundle you downloaded.
 
 ### <a id='cluster-context'></a> Set Kubernetes cluster context
 
@@ -41,28 +39,11 @@ For all other clusters, install Cluster Essentials using the following steps.
     kubectl config get-contexts
     ```
 
-    For example:
+
+1.  Set the context to the cluster that you want to use for the Cluster Essentials install.
 
     ```
-    $ kubectl config get-contexts
-    CURRENT   NAME                                CLUSTER           AUTHINFO                                NAMESPACE
-            aks-repo-trial                      aks-repo-trial    clusterUser_aks-rg-01_aks-repo-trial
-    *       aks-tap-cluster                     aks-tap-cluster   clusterUser_aks-rg-01_aks-tap-cluster
-
-    ```
-
-1.  Set the context to the cluster that you want to use for the Tanzu Application Platform packages install.
-    For example, set the context to the `aks-tap-cluster` context by running:
-
-    ```
-    kubectl config use-context aks-tap-cluster
-    ```
-
-    For example:
-
-    ```
-    $ kubectl config use-context aks-tap-cluster
-    Switched to context "aks-tap-cluster".
+    kubectl config use-context CONTEXT-NAME
     ```
 
 ### <a id='install'></a> Deploy onto cluster
@@ -94,9 +75,7 @@ For all other clusters, install Cluster Essentials using the following steps.
     ./install.sh --yes
     ```
 
-    Where:
-
-    - `TANZU-NET-USER` and `TANZU-NET-PASSWORD` are your credentials for VMware Tanzu Network.
+    Where `TANZU-NET-USER` and `TANZU-NET-PASSWORD` are your credentials for VMware Tanzu Network.
 
 ### <a id='cli-install'></a> Optionally install CLIs onto your `$PATH`
 1. (Optional) Several Tanzu products, such as Tanzu Application Platform, use the `kapp` CLI to deploy. For convenience, you may install the `kapp` CLI onto your `$PATH`:
@@ -129,15 +108,13 @@ For all other clusters, if you already have Cluster Essentials 1.0 installed on 
     ./install.sh --yes
     ```
 
-    Where:
-
-    - `TANZU-NET-USER` and `TANZU-NET-PASSWORD` are your credentials for VMware Tanzu Network.
+    Where `TANZU-NET-USER` and `TANZU-NET-PASSWORD` are your credentials for VMware Tanzu Network.
 
 1. Follow the [steps above](#cli-install) to optionally install newer versions of the `kapp` and `imgpkg` CLIs to your path 
 
 
 ## <a id='uninstall'></a> Uninstall
-**Caution:** Please ensure that you have uninstalled all CRs created by kapp-controller and secretgen-controller before running the uninstall script for Cluster Essentials.
+**Caution:** Please ensure that you have uninstalled all Custom Resources created by `kapp-controller` and `secretgen-controller` before running the uninstall script for Cluster Essentials.
 
 1. Follow the steps above to [Set Kubernetes cluster context](#cluster-context)
 
