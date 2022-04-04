@@ -1,11 +1,11 @@
-# <a id='tanzu-cluster-essentials'></a> Deploying Cluster Essentials
+# <a id='tanzu-cluster-essentials'></a> Deploy Cluster Essentials
 
 This document describes how to install, upgrade, and uninstall Cluster Essentials.
 
 ## <a id='supported-platforms'></a> Supported Platforms
 Currently, Cluster Essentials only supports MacOS and Linux. 
 
-## <a id='install'></a> Installing
+## <a id='install'></a> Install
 If you are using a VMware Tanzu Kubernetes Grid cluster, you do not need to install Cluster Essentials because the contents of Cluster Essentials are already installed on your cluster.
 
 For all other clusters, install Cluster Essentials using the following steps.
@@ -65,7 +65,7 @@ For all other clusters, install Cluster Essentials using the following steps.
     Switched to context "aks-tap-cluster".
     ```
 
-### <a id='install'></a> Installing
+### <a id='install'></a> Deploy onto cluster
 
 1. (Optional) If your registry needs a custom certificate, you must [load that configuration](https://carvel.dev/kapp-controller/docs/v0.34.0/controller-config/) into the cluster before installing `kapp-controller`. If your registry uses a public certificate, this step is not required.
 
@@ -111,7 +111,7 @@ For all other clusters, install Cluster Essentials using the following steps.
     sudo cp $HOME/tanzu-cluster-essentials/imgpkg /usr/local/bin/imgpkg
     ```
 
-## <a id='upgrade'></a> Upgrading
+## <a id='upgrade'></a> Upgrade
 Cluster Essentials components (such as `kapp-controller` and `secretgen-controller`) cannot be upgraded on clusters provisioned using VMware Tanzu Kubernetes Grid, Tanzu Community Edition, and VMware Tanzu Mission Control. 
 
 For all other clusters, if you already have Cluster Essentials 1.0 installed on your target cluster, you can upgrade to Cluster Essentials 1.1 using the following steps. Running this upgrade will update the `kapp-controller` version on your cluster to `v0.34.0` and `secretgen-controller` version to `v0.8.0`.
@@ -135,11 +135,8 @@ For all other clusters, if you already have Cluster Essentials 1.0 installed on 
 
 1. Follow the [steps above](#cli-install) to optionally install newer versions of the `kapp` and `imgpkg` CLIs to your path 
 
-    ```
-    sudo cp $HOME/tanzu-cluster-essentials/imgpkg /usr/local/bin/imgpkg
-    ```
 
-## <a id='uninstall'></a> Uninstalling
+## <a id='uninstall'></a> Uninstall
 **Caution:** Please ensure that you have uninstalled all CRs created by kapp-controller and secretgen-controller before running the uninstall script for Cluster Essentials.
 
 1. Follow the steps above to [Set Kubernetes cluster context](#cluster-context)
