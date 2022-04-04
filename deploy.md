@@ -1,4 +1,4 @@
-# <a id='tanzu-cluster-essentials'></a> Deploy Cluster Essentials
+# Deploy Cluster Essentials
 
 This document describes how to install, upgrade, and uninstall Cluster Essentials.
 
