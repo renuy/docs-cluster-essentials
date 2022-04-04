@@ -17,7 +17,7 @@ VMware Tanzu Kubernetes Grid clusters, Tanzu Community Edition clusters, and clu
 
 `ytt` is a CLI tool for templating, overlaying, and configuration management. It is structure-oriented -- ytt templates are YAML documents made from nodes such as maps and arrays. It comes with a Python-like programming language, Starlark, which allows you to write modularized configuration that can be reused and shared, and runs in a hermetic environment making it deterministic. Several Tanzu packages leverage `ytt` templates for templating and overlaying.
 
-`kbld` is
+`kbld` is CLI a tool that enables finding and resolving OCI registry image references to digests within Kubernetes configuration. It works hand in hand with imgpkg by accepting updated image references after an imgpkg bundle has been copied to another registry and is leveraged by Tanzu products to enable relocation to air-gapped environments and private registries.
 
 To learn more about any of these tools, please visit the open source [Carvel website](https://carvel.dev/). The [Carvel Blog](https://carvel.dev/blog/) is also a good resource for learning about best practices and real world usage of the Carvel tools. 
 
