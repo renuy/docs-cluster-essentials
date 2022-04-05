@@ -13,11 +13,3 @@ This topic contains release notes for Cluster Essentials for VMware Tanzu. A new
 * Updating **secretgen-controller to v0.8.0**
 
 * Adding an **uninstall.sh** script for uninstalling all in-cluster components. Please ensure that you have uninstalled all CRs created by kapp-controller and secretgen-controller before running the uninstall script for Cluster Essentials.
-
-## <a id='1-1'></a> v1.0
-
-**Release Date**: December 8, 2021
-
-### <a id='1-1-new-features'></a> New features
-* Providing container images for controllers and CLIs needed for easy deployment and management of Tanzu products. 
-
