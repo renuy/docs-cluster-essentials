@@ -1,6 +1,6 @@
-# Deploy Cluster Essentials
+# Deploy Cluster Essentials for VMware Tanzu v1.1
 
-This document describes how to install, upgrade, and uninstall Cluster Essentials.
+This document describes how to install, upgrade, and uninstall Cluster Essentials v1.1.
 
 ## <a id='supported-platforms'></a> Supported Platforms
 Currently, Cluster Essentials only supports MacOS and Linux. 
