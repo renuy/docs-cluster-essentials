@@ -3,14 +3,29 @@
 This document describes how to install, upgrade, and uninstall Cluster Essentials v1.2.
 
 ## <a id='supported-platforms'></a> Supported Platforms
+
 Currently, Cluster Essentials only supports MacOS and Linux. 
 
+## <a id='supported-kube'></a> Supported Kubernetes versions
+
+Installation requires Kubernetes cluster v1.2.0, v1.21, v1.22, v1.23, or v1.24 on one of the following Kubernetes
+providers:
+
+- Azure Kubernetes Service
+- Amazon Elastic Kubernetes Service
+- Google Kubernetes Engine
+    - GKE Autopilot clusters do not have required features enabled
+- Minikube
+- Kind
+
 ## <a id='install'></a> Install
+
 If you are using a VMware Tanzu Kubernetes Grid cluster, you do not need to install Cluster Essentials because the contents of Cluster Essentials are already installed on your cluster.
 
 For all other clusters, install Cluster Essentials using the following steps.
 
 ### <a id='download'></a> Download artifacts from Tanzu Network
+
 1. Sign in to [Tanzu Network](https://network.tanzu.vmware.com).
 
 1. Go to [Cluster Essentials for VMware Tanzu](https://network.tanzu.vmware.com/products/tanzu-cluster-essentials/) on VMware Tanzu Network.
