@@ -86,7 +86,7 @@ For all other clusters, install Cluster Essentials using the following steps.
           IMGPKG_REGISTRY_USERNAME=TANZUNET-REGISTRY-USERNAME \
           IMGPKG_REGISTRY_PASSWORD=TANZUNET-REGISTRY-PASSWORD \
           imgpkg copy \
-            -b registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle:1.2.0 \
+            -b registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:c7c4cb124c06ca0b6a5a6c31617781fd5b4513e03df1cb49d5d19e91c7166644 \
             --to-tar cluster-essentials-bundle-1.2.0.tar \
             --include-non-distributable-layers
 
