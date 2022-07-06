@@ -2,13 +2,9 @@
 
 This document describes how to install, upgrade, and uninstall Cluster Essentials v1.2.
 
-## <a id='supported-platforms'></a> Supported Platforms
-
-Currently, Cluster Essentials only supports MacOS and Linux. 
-
 ## <a id='supported-kube'></a> Supported Kubernetes versions
 
-Installation requires Kubernetes cluster v1.2.0, v1.21, v1.22, v1.23, or v1.24 on one of the following Kubernetes
+Installation requires Kubernetes cluster v1.20, v1.21, v1.22, v1.23, or v1.24 on one of the following Kubernetes
 providers:
 
 - Azure Kubernetes Service
@@ -17,6 +13,10 @@ providers:
     - GKE Autopilot clusters do not have required features enabled
 - Minikube
 - Kind
+
+### <a id='supported-platforms'></a> Supported Platforms
+
+The Cluster Essentials install script can only be run on MacOS and Linux. 
 
 ## <a id='install'></a> Install
 
@@ -144,7 +144,7 @@ For all other clusters, install Cluster Essentials using the following steps.
 ## <a id='upgrade'></a> Upgrade
 Cluster Essentials components (such as `kapp-controller` and `secretgen-controller`) cannot be upgraded on clusters provisioned using VMware Tanzu Kubernetes Grid, Tanzu Community Edition, and VMware Tanzu Mission Control. 
 
-For all other clusters, if you already have Cluster Essentials 1.0 installed on your target cluster, you can upgrade to Cluster Essentials 1.2 using the following steps. Running this upgrade will update the `kapp-controller` version on your cluster to `v0.38.3` and `secretgen-controller` version to `v0.9.1`.
+For all other clusters, if you already have Cluster Essentials 1.0+ installed on your target cluster, you can upgrade to Cluster Essentials 1.2 using the following steps. Running this upgrade will update the `kapp-controller` version on your cluster to `v0.38.3` and `secretgen-controller` version to `v0.9.1`.
 
 1. Follow the steps above to [Download artifacts from Tanzu Network](#download) and [Set Kubernetes cluster context](#cluster-context)
 
