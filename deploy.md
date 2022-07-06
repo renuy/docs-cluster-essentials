@@ -10,7 +10,6 @@ providers:
 - Azure Kubernetes Service
 - Amazon Elastic Kubernetes Service
 - Google Kubernetes Engine
-    - GKE Autopilot clusters do not have required features enabled
 - Minikube
 - Kind
 
