@@ -66,8 +66,6 @@ For all other clusters, install Cluster Essentials using the following steps.
 
 1. Configure and run `install.sh`, which will install `kapp-controller` and `secretgen-controller` on your cluster:
 
-- For online installation, run:
-
     ```
     export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:ab0a3539da241a6ea59c75c0743e9058511d7c56312ea3906178ec0f3491f51d
     export INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
@@ -76,43 +74,8 @@ For all other clusters, install Cluster Essentials using the following steps.
     cd $HOME/tanzu-cluster-essentials
     ./install.sh --yes
     ```
-    
+
     Where `TANZU-NET-USER` and `TANZU-NET-PASSWORD` are your credentials for VMware Tanzu Network.
-
-- For air-gapped installation, run:
-
-    ```
-    $ IMGPKG_REGISTRY_HOSTNAME=registry.tanzu.vmware.com \
-      IMGPKG_REGISTRY_USERNAME=TANZUNET-REGISTRY-USERNAME \
-      IMGPKG_REGISTRY_PASSWORD=TANZUNET-REGISTRY-PASSWORD \
-      imgpkg copy \
-        -b registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle:1.2.0 \
-        --to-tar cluster-essentials-bundle-1.2.0.tar \
-        --include-non-distributable-layers
-
-    $ IMGPKG_REGISTRY_HOSTNAME=MY-REGISTRY \
-      IMGPKG_REGISTRY_USERNAME=MY-REGISTRY-USER \
-      IMGPKG_REGISTRY_PASSWORD=MY-REGISTRY-PASSWORD \
-      imgpkg copy \
-        --tar cluster-essentials-bundle-1.2.0.tar \
-        --to-repo CUSTOMER-REGISTRY-HOSTNAME/cluster-essentials-bundle \
-        --include-non-distributable-layers \
-        --registry-ca-cert-path CA_PATH
-    $ INSTALL_BUNDLE=CUSTOMER-REGISTRY-HOSTNAME/cluster-essentials-bundle:1.2.0 \
-      INSTALL_REGISTRY_HOSTNAME=MY-REGISTRY \
-      INSTALL_REGISTRY_USERNAME=MY-REGISTRY-USER \
-      INSTALL_REGISTRY_PASSWORD=MY-REGISTRY-PASSWORD \
-      ./install.sh
-    ```
-
-    Where:
-
-    - `TANZUNET-REGISTRY-USERNAME` is your username of the VMware Tanzu Network.
-    - `TANZUNET-REGISTRY-PASSWORD` is your password of the VMware Tanzu Network.
-    - `MY-REGISTRY` is your air-gapped container registry.
-    - `MY-REGISTRY-USER` is the user with write access to `MY-REGISTRY`.
-    - `MY-REGISTRY-PASSWORD` is the password for `MY-REGISTRY-USER`.
-
 
 ### <a id='cli-install'></a> Optionally install CLIs onto your `$PATH`
 1. (Optional) Several Tanzu products, such as Tanzu Application Platform, use the `kapp` CLI to deploy. For convenience, you may install the `kapp` CLI onto your `$PATH`:
