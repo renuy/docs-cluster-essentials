@@ -39,12 +39,13 @@ For all other clusters, install Cluster Essentials using the following steps.
     kubectl config get-contexts
     ```
 
-
 1.  Set the context to the cluster that you want to use for the Cluster Essentials install.
 
     ```
     kubectl config use-context CONTEXT-NAME
     ```
+
+    Where `CONTEXT-NAME` can be retrieved from the outputs of the previous step.
 
 ### <a id='install'></a> Deploy onto cluster
 
