@@ -103,14 +103,14 @@ For all other clusters, install Cluster Essentials using the following steps.
           IMGPKG_REGISTRY_PASSWORD=TANZUNET-REGISTRY-PASSWORD \
           imgpkg copy \
             -b registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:54bf611711923dccd7c7f10603c846782b90644d48f1cb570b43a082d18e23b9 \
-            --to-tar cluster-essentials-bundle-1.2.0.tar \
+            --to-tar cluster-essentials-bundle-1.3.0.tar \
             --include-non-distributable-layers
 
         $ IMGPKG_REGISTRY_HOSTNAME=MY-REGISTRY \
           IMGPKG_REGISTRY_USERNAME=MY-REGISTRY-USER \
           IMGPKG_REGISTRY_PASSWORD=MY-REGISTRY-PASSWORD \
           imgpkg copy \
-            --tar cluster-essentials-bundle-1.2.0.tar \
+            --tar cluster-essentials-bundle-1.3.0.tar \
             --to-repo CUSTOMER-REGISTRY-HOSTNAME/cluster-essentials-bundle \
             --include-non-distributable-layers \
             --registry-ca-cert-path CA_PATH
@@ -145,7 +145,7 @@ For all other clusters, install Cluster Essentials using the following steps.
 ## <a id='upgrade'></a> Upgrade
 Cluster Essentials components (such as `kapp-controller` and `secretgen-controller`) cannot be upgraded on clusters provisioned using VMware Tanzu Kubernetes Grid, Tanzu Community Edition, and VMware Tanzu Mission Control. 
 
-For all other clusters, if you already have Cluster Essentials 1.0+ installed on your target cluster, you can upgrade to Cluster Essentials 1.2 using the following steps. Running this upgrade will update the `kapp-controller` version on your cluster to `v0.38.4` and `secretgen-controller` version to `v0.9.1`.
+For all other clusters, if you already have Cluster Essentials 1.0+ installed on your target cluster, you can upgrade to Cluster Essentials 1.3 using the following steps. Running this upgrade will update the `kapp-controller` version on your cluster to `v0.38.4` and `secretgen-controller` version to `v0.9.1`.
 
 1. Follow the steps above to [Download artifacts from Tanzu Network](#download) and [Set Kubernetes cluster context](#cluster-context)
 
