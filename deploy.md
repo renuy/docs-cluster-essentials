@@ -1,6 +1,6 @@
-# Deploying Cluster Essentials v1.2
+# Deploying Cluster Essentials v1.3
 
-This document describes how to install, upgrade, and uninstall Cluster Essentials v1.2.
+This document describes how to install, upgrade, and uninstall Cluster Essentials v1.3.
 
 ## <a id='supported-kube'></a> Supported Kubernetes versions
 
@@ -10,12 +10,13 @@ providers:
 - Azure Kubernetes Service
 - Amazon Elastic Kubernetes Service
 - Google Kubernetes Engine
+- Red Hat OpenShift v4.10 running on vSphere and baremetal clusters
 - Minikube
 - Kind
 
 ### <a id='supported-platforms'></a> Supported Platforms
 
-The Cluster Essentials install script can only be run on MacOS and Linux. 
+The Cluster Essentials install script can only be run on MacOS, Windows and Linux. 
 
 ## <a id='install'></a> Install
 
@@ -33,8 +34,8 @@ For all other clusters, install Cluster Essentials using the following steps.
 
 1.  Select a download according to your Kubernetes provider and operating system:
 
-    - For macOS, download `tanzu-cluster-essentials-darwin-amd64-1.2.0.tgz`.
-    - For Linux, download `tanzu-cluster-essentials-linux-amd64-1.2.0.tgz`.
+    - For macOS, download `tanzu-cluster-essentials-darwin-amd64-1.3.0.tgz`.
+    - For Linux, download `tanzu-cluster-essentials-linux-amd64-1.3.0.tgz`.
 
 1. Unpack the TAR file into the `tanzu-cluster-essentials` directory:
 
@@ -84,7 +85,7 @@ For all other clusters, install Cluster Essentials using the following steps.
     - For online installation, run:
 
         ```
-        export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:e00f33b92d418f49b1af79f42cb13d6765f1c8c731f4528dfff8343af042dc3e
+        export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:54bf611711923dccd7c7f10603c846782b90644d48f1cb570b43a082d18e23b9
         export INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
         export INSTALL_REGISTRY_USERNAME=TANZU-NET-USER
         export INSTALL_REGISTRY_PASSWORD=TANZU-NET-PASSWORD
@@ -101,7 +102,7 @@ For all other clusters, install Cluster Essentials using the following steps.
           IMGPKG_REGISTRY_USERNAME=TANZUNET-REGISTRY-USERNAME \
           IMGPKG_REGISTRY_PASSWORD=TANZUNET-REGISTRY-PASSWORD \
           imgpkg copy \
-            -b registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:e00f33b92d418f49b1af79f42cb13d6765f1c8c731f4528dfff8343af042dc3e \
+            -b registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:54bf611711923dccd7c7f10603c846782b90644d48f1cb570b43a082d18e23b9 \
             --to-tar cluster-essentials-bundle-1.2.0.tar \
             --include-non-distributable-layers
 
@@ -113,7 +114,7 @@ For all other clusters, install Cluster Essentials using the following steps.
             --to-repo CUSTOMER-REGISTRY-HOSTNAME/cluster-essentials-bundle \
             --include-non-distributable-layers \
             --registry-ca-cert-path CA_PATH
-        $ INSTALL_BUNDLE=CUSTOMER-REGISTRY-HOSTNAME/cluster-essentials-bundle:e00f33b92d418f49b1af79f42cb13d6765f1c8c731f4528dfff8343af042dc3e \
+        $ INSTALL_BUNDLE=CUSTOMER-REGISTRY-HOSTNAME/cluster-essentials-bundle:54bf611711923dccd7c7f10603c846782b90644d48f1cb570b43a082d18e23b9 \
           INSTALL_REGISTRY_HOSTNAME=MY-REGISTRY \
           INSTALL_REGISTRY_USERNAME=MY-REGISTRY-USER \
           INSTALL_REGISTRY_PASSWORD=MY-REGISTRY-PASSWORD \
@@ -151,7 +152,7 @@ For all other clusters, if you already have Cluster Essentials 1.0+ installed on
 1. Configure and run `install.sh`, which will install `kapp-controller` and `secretgen-controller` on your cluster:
 
     ```
-    export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:e00f33b92d418f49b1af79f42cb13d6765f1c8c731f4528dfff8343af042dc3e
+    export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:54bf611711923dccd7c7f10603c846782b90644d48f1cb570b43a082d18e23b9
     export INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
     export INSTALL_REGISTRY_USERNAME=TANZU-NET-USER
     export INSTALL_REGISTRY_PASSWORD=TANZU-NET-PASSWORD
