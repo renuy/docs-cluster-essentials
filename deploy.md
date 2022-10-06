@@ -122,11 +122,11 @@ For all other clusters, install Cluster Essentials using the following steps.
           IMGPKG_REGISTRY_PASSWORD=MY-REGISTRY-PASSWORD \
           imgpkg copy \
             --tar cluster-essentials-bundle-1.3.0.tar \
-            --to-repo CUSTOMER-REGISTRY-HOSTNAME/cluster-essentials-bundle \
+            --to-repo MY-REGISTRY/cluster-essentials-bundle \
             --include-non-distributable-layers \
             --registry-ca-cert-path CA_PATH
 
-        $ INSTALL_BUNDLE=CUSTOMER-REGISTRY-HOSTNAME/cluster-essentials-bundle:54bf611711923dccd7c7f10603c846782b90644d48f1cb570b43a082d18e23b9 \
+        $ INSTALL_BUNDLE=MY-REGISTRY/cluster-essentials-bundle:54bf611711923dccd7c7f10603c846782b90644d48f1cb570b43a082d18e23b9 \
           INSTALL_REGISTRY_HOSTNAME=MY-REGISTRY \
           INSTALL_REGISTRY_USERNAME=MY-REGISTRY-USER \
           INSTALL_REGISTRY_PASSWORD=MY-REGISTRY-PASSWORD \
@@ -181,11 +181,11 @@ For all other clusters, install Cluster Essentials using the following steps.
         :: Interactive enter MY-REGISTRY-PASSWORD
         imgpkg copy ^
           --tar cluster-essentials-bundle-1.2.0.tar ^
-          --to-repo CUSTOMER-REGISTRY-HOSTNAME/cluster-essentials-bundle ^
+          --to-repo MY-REGISTRY/cluster-essentials-bundle ^
           --include-non-distributable-layers ^
           --registry-ca-cert-path CA_PATH
 
-        set INSTALL_BUNDLE=CUSTOMER-REGISTRY-HOSTNAME/cluster-essentials-bundle:54bf611711923dccd7c7f10603c846782b90644d48f1cb570b43a082d18e23b9
+        set INSTALL_BUNDLE=MY-REGISTRY/cluster-essentials-bundle:54bf611711923dccd7c7f10603c846782b90644d48f1cb570b43a082d18e23b9
         set INSTALL_REGISTRY_HOSTNAME=MY-REGISTRY
         set INSTALL_REGISTRY_USERNAME=MY-REGISTRY-USER
         set /p INSTALL_REGISTRY_PASSWORD=password:
