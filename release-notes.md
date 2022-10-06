@@ -8,14 +8,24 @@ This topic contains release notes for Cluster Essentials for VMware Tanzu. A new
 
 ### <a id='1-3-new-features'></a> New features
 
-- Surface namespace and group-kind of App CR associated resources in App CR status
-- Package authors can now specify that their package can be installed on a certain versions of kapp-controller or Kubernetes
-- Allow configuring minimum app sync period
-- Adjust default TLS cipher suites to be restrictive
-- Clean up sidecarexec socket file in case of previous unclean process termination
-- Add support for OpenShift 4.10 running on vSphere and baremetal
-- Add a Windows installer for Cluster Essentials
+* Adding support for Red Hat OpenShift Container Platform 4.10 running on vSphere and baremetal
+* Adding a Windows installer for Cluster Essentials
 
+* Updating **kapp-controller to v0.41.2**. Some highlights from this release are listed below. A full list of new features can be found in the open source [release notes](https://github.com/vmware-tanzu/carvel-kapp-controller/releases).
+  * Surface namespace and group-kind of App CR associated resources in App CR status
+  * Package authors can now specify that their package can be installed on a certain versions of kapp-controller or Kubernetes
+  * Allow configuring minimum app sync period
+  * Adjust default TLS cipher suites to be restrictive
+  * [Bug fix] Clean up sidecarexec socket file in case of previous unclean process termination
+
+* Updating **secretgen-controller to v0.11.0**
+
+* Updating Carvel CLIs
+  * imgpkg to v0.31.0
+  * kbld to v0.35.0 
+  * ytt to v0.43.0 
+  * kapp to v0.53.0
+  
 ## <a id='1-2'></a> v1.2.0
 
 **Release Date**: July 11, 2022
