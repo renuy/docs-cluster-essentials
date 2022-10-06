@@ -9,12 +9,12 @@ This topic contains release notes for Cluster Essentials for VMware Tanzu. A new
 ### <a id='1-3-new-features'></a> New features
 
 - Surface namespace and group-kind of App CR associated resources in App CR status
-- Package authors can now specify that their package can be installed on a certain versions of kapp-controller and/or kubernetes
-- Allow configuring min app sync period
+- Package authors can now specify that their package can be installed on a certain versions of kapp-controller or Kubernetes
+- Allow configuring minimum app sync period
 - Adjust default TLS cipher suites to be restrictive
 - Clean up sidecarexec socket file in case of previous unclean process termination
 - Add support for OpenShift 4.10 running on vSphere and baremetal
-- Add a windows installer for Cluster Essentials
+- Add a Windows installer for Cluster Essentials
 
 ## <a id='1-2'></a> v1.2.0
 
