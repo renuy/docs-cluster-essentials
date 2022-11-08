@@ -113,7 +113,7 @@ For all other clusters, install Cluster Essentials using the following steps.
             --to-repo CUSTOMER-REGISTRY-HOSTNAME/cluster-essentials-bundle \
             --include-non-distributable-layers \
             --registry-ca-cert-path CA_PATH
-        $ INSTALL_BUNDLE=CUSTOMER-REGISTRY-HOSTNAME/cluster-essentials-bundle:e00f33b92d418f49b1af79f42cb13d6765f1c8c731f4528dfff8343af042dc3e \
+        $ INSTALL_BUNDLE=CUSTOMER-REGISTRY-HOSTNAME/cluster-essentials-bundle@sha256:e00f33b92d418f49b1af79f42cb13d6765f1c8c731f4528dfff8343af042dc3e \
           INSTALL_REGISTRY_HOSTNAME=MY-REGISTRY \
           INSTALL_REGISTRY_USERNAME=MY-REGISTRY-USER \
           INSTALL_REGISTRY_PASSWORD=MY-REGISTRY-PASSWORD \
