@@ -219,7 +219,7 @@ For all other clusters, install Cluster Essentials using the following steps.
 
 Cluster Essentials components (such as `kapp-controller` and `secretgen-controller`) cannot be upgraded on clusters provisioned using VMware Tanzu Kubernetes Grid, Tanzu Community Edition, and VMware Tanzu Mission Control. 
 
-For all other clusters, if you already have Cluster Essentials 1.0+ installed on your target cluster, you can upgrade to Cluster Essentials 1.4 using the following steps. Running this upgrade will update the `kapp-controller` version on your cluster to `v0.41.2` and `secretgen-controller` version to `v0.11.0`.
+For all other clusters, if you already have Cluster Essentials 1.0+ installed on your target cluster, you can upgrade to Cluster Essentials 1.4 using the following steps. Running this upgrade will update the `kapp-controller` version on your cluster to `v0.44.1` and `secretgen-controller` version to `v0.13.0`.
 
 1. Follow the steps above to [Download artifacts from Tanzu Network](#download) and [Set Kubernetes cluster context](#cluster-context)
 
