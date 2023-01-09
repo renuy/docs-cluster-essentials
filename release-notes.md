@@ -14,6 +14,7 @@ This topic contains release notes for Cluster Essentials for VMware Tanzu. A new
 **Release Date**: January 9, 2023
 
 ### <a id='1-4-new-features'></a> New features
+* Adding support for Kubernetes 1.25 and OpenShift 4.11
 * Updating **kapp-controller to v0.44.1**. Some highlights from this release are listed below. A full list of new features can be found in the open source [release notes](https://github.com/vmware-tanzu/carvel-kapp-controller/releases).
   * Caching of images and bundles to improve resiliency when the image registry is not available
   * Improved experience deploying on OpenShift 4.11 by resolving warnings
