@@ -4,13 +4,13 @@ This document describes how to install, upgrade, and uninstall Cluster Essential
 
 ## <a id='supported-kube'></a> Supported Kubernetes versions
 
-Installation requires Kubernetes cluster v1.20, v1.21, v1.22, v1.23, or v1.24 on one of the following Kubernetes
+Installation requires Kubernetes cluster v1.20, v1.21, v1.22, v1.23, v1.24, v1.25 on one of the following Kubernetes
 providers:
 
 - Azure Kubernetes Service
 - Amazon Elastic Kubernetes Service
 - Google Kubernetes Engine
-- Red Hat OpenShift v4.10 running on vSphere and baremetal clusters
+- Red Hat OpenShift v4.11 running on vSphere and baremetal clusters
 - Minikube
 - Kind
 
@@ -185,7 +185,7 @@ For all other clusters, install Cluster Essentials using the following steps.
           --include-non-distributable-layers ^
           --registry-ca-cert-path CA_PATH
 
-        set INSTALL_BUNDLE=MY-REGISTRY/cluster-essentials-bundle:54bf611711923dccd7c7f10603c846782b90644d48f1cb570b43a082d18e23b9
+        set INSTALL_BUNDLE=MY-REGISTRY/cluster-essentials-bundle:5fd527dda8af0e4c25c427e5659559a2ff9b283f6655a335ae08357ff63b8e7f
         set INSTALL_REGISTRY_HOSTNAME=MY-REGISTRY
         set INSTALL_REGISTRY_USERNAME=MY-REGISTRY-USER
         set /p INSTALL_REGISTRY_PASSWORD=password:
