@@ -4,9 +4,19 @@ This topic contains release notes for Cluster Essentials for VMware Tanzu. A new
 
 ## <a id='1-4'></a> v1.4.0
 
-**Release Date**:
+**Release Date**: January 9, 2023
 
 ### <a id='1-4-new-features'></a> New features
+* Updating **kapp-controller to v0.44.1**. Some highlights from this release are listed below. A full list of new features can be found in the open source [release notes](https://github.com/vmware-tanzu/carvel-kapp-controller/releases).
+  * Caching of images and bundles to improve resiliency when the image registry is not available
+  * Improved experience deploying on OpenShift 4.11 by resolving warnings
+  * Improved pausing and waiting behaviors for PackageInstall
+* Updating **secretgen-controller to v0.13.0**
+* Updating Carvel CLIs
+  * imgpkg to v0.31.1
+  * kapp to v0.54.1
+  * kbld to v0.36.1
+  * ytt to v0.44.1
 
 ## <a id='1-3'></a> v1.3.0
 
