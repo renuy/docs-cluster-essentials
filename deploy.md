@@ -4,7 +4,7 @@ This document describes how to install, upgrade, and uninstall Cluster Essential
 
 ## <a id='supported-kube'></a> Supported Kubernetes versions
 
-Installation requires Kubernetes cluster v1.20, v1.21, v1.22, v1.23, v1.24, v1.25 on one of the following Kubernetes
+Installation requires Kubernetes cluster v1.22, v1.23, v1.24, or v1.25 on one of the following Kubernetes
 providers:
 
 - Azure Kubernetes Service
