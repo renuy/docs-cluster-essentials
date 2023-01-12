@@ -8,7 +8,7 @@ This topic contains release notes for Cluster Essentials for VMware Tanzu. A new
 
 ### <a id='1-4-issues'></a> Known Issues
 * Automatic IaaS authentication for fetching images from IaaS provided registry, for exmaple, ECR from EKS, does not succeed. 
-VMware recommends continuing using Cluster Essentials v1.3.0 if this feature is required.
+VMware recommends continued use of Cluster Essentials v1.3.0 if this feature is required.
 
 ### <a id='1-4-new-features'></a> New features
 * Adding support for Kubernetes 1.25 and OpenShift 4.11
