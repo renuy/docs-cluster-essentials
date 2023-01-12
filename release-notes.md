@@ -6,6 +6,9 @@ This topic contains release notes for Cluster Essentials for VMware Tanzu. A new
 
 **Release Date**: January 9, 2023
 
+### <a id='1-4-issues'></a> Known Issues
+* Automatic IaaS authentication used for fetching images from IaaS provided registry (e.g. ECR from EKS) does not succeed. If your environment uses this feature we recommend to continue to use Cluster Essentials v1.3.0.
+
 ### <a id='1-4-new-features'></a> New features
 * Adding support for Kubernetes 1.25 and OpenShift 4.11
 * Updating **kapp-controller to v0.44.1**. Some highlights from this release are listed below. A full list of new features can be found in the open source [release notes](https://github.com/vmware-tanzu/carvel-kapp-controller/releases).
