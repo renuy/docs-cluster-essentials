@@ -115,14 +115,15 @@ For all other clusters, if you already have Cluster Essentials 1.0 installed on 
 
 ### <a id='upgrade-rollback'></a> Rollback
 
-Uninstalling Cluster Essentials when the upgrade fails will cause an unrepairable state for your cluster. 
+>**Caution** Uninstalling Cluster Essentials when the upgrade fails will cause an unrepairable state for your cluster.
+
 To rollback to the previously installed version, follow the previous version of Cluster Essentials deployment instructions.
 
 ## <a id='uninstall'></a> Uninstall
 
-**Caution:** Uninstalling Cluster Essentials when the installation fails will cause an unrepairable state for your cluster.
+>**Caution** Uninstalling Cluster Essentials when the installation fails will cause an unrepairable state for your cluster.
 
-**Caution:** You must uninstall all the Custom Resources created by `kapp-controller` and `secretgen-controller` before running the uninstall script for Cluster Essentials.
+>**Caution** You must uninstall all the Custom Resources created by `kapp-controller` and `secretgen-controller` before running the uninstall script for Cluster Essentials.
 
 1. Follow the steps above to [Set Kubernetes cluster context](#cluster-context)
 
