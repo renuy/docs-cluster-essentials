@@ -163,8 +163,16 @@ For all other clusters, if you already have Cluster Essentials 1.0+ installed on
 
 1. Follow the [steps above](#cli-install) to optionally install newer versions of the `kapp` and `imgpkg` CLIs to your path 
 
+### <a id='upgrade-rollback'></a> Rollback
+
+**Caution**: Do not try to uninstall Cluster Essentials if your upgrade fails. Doing so will leave your cluster in an unrepairable state.
+
+To rollback to previously installed version execute regular "Install" instructions from the previous version of Cluster Essentials.
 
 ## <a id='uninstall'></a> Uninstall
+
+**Caution:** If you are trying to fix your Cluster Essentials installation, do not try to uninstall it. Doing so will leave your cluster in an unrepairable state.
+
 **Caution:** Please ensure that you have uninstalled all Custom Resources created by `kapp-controller` and `secretgen-controller` before running the uninstall script for Cluster Essentials.
 
 1. Follow the steps above to [Set Kubernetes cluster context](#cluster-context)
