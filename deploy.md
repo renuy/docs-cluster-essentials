@@ -1,4 +1,4 @@
-# Deploying Cluster Essentials v1.4
+# Deploying Cluster Essentials v1.4.1
 
 This document describes how to install, upgrade, and uninstall Cluster Essentials v1.4.1.
 
@@ -10,7 +10,7 @@ providers:
 - Azure Kubernetes Service
 - Amazon Elastic Kubernetes Service
 - Google Kubernetes Engine
-- Red Hat OpenShift v4.10 & v4.11 running on vSphere and baremetal clusters
+- Red Hat OpenShift v4.10 and v4.11 running on vSphere and baremetal clusters
 - Minikube
 - Kind
 
