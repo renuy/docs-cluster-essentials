@@ -2,6 +2,13 @@
 
 This topic contains release notes for Cluster Essentials for VMware Tanzu. A new minor release for Cluster Essentials is publish every quarter. Monthly patch releases are published to address critical bugs and CVEs, if there are any.
 
+## <a id='1-6'></a> v1.6.0
+
+**Release Date**: 
+
+### <a id='1-6-new-features'></a> New features
+
+
 ## <a id='1-5'></a> v1.5.0
 
 **Release Date**: March 31, 2023
