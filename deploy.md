@@ -4,7 +4,7 @@ This document describes how to install, upgrade, and uninstall Cluster Essential
 
 ## <a id='supported-kube'></a> Supported Kubernetes versions
 
-Installation requires Kubernetes cluster v1.22, v1.23, v1.24, or v1.25 on one of the following Kubernetes
+Installation requires Kubernetes cluster v1.22, v1.23, v1.24, v1.25 0r v1.26 on one of the following Kubernetes
 providers:
 
 - Azure Kubernetes Service
@@ -96,7 +96,7 @@ For all other clusters, install Cluster Essentials using the following steps.
     - For online installation, run:
 
         ```
-        export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:5fd527dda8af0e4c25c427e5659559a2ff9b283f6655a335ae08357ff63b8e7f
+        export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:79abddbc3b49b44fc368fede0dab93c266ff7c1fe305e2d555ed52d00361b446
         export INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
         export INSTALL_REGISTRY_USERNAME=TANZU-NET-USER
         export INSTALL_REGISTRY_PASSWORD=TANZU-NET-PASSWORD
