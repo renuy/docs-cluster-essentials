@@ -8,8 +8,9 @@ This repository contains the content for Cluster Essentials for VMware Tanzu.
 
 | Branch | Staging | Production |
 |--------|---------|------------|
-| main    | [Staging 1.5 (Pre-release v1.5 docs)](https://docs-staging.vmware.com/en/draft/Cluster-Essentials-for-VMware-Tanzu/1.5/cluster-essentials/deploy.html)    | n/a       |
-| 1.4    | [Staging 1.4](https://docs-staging.vmware.com/en/Cluster-Essentials-for-VMware-Tanzu/1.4/cluster-essentials/GUID-deploy.html)    | [Production 1.4](https://docs.vmware.com/en/Cluster-Essentials-for-VMware-Tanzu/1.4/cluster-essentials/GUID-deploy.html)       |
+| main    | [Staging 1.6 (Pre-release v1.6 docs)](https://docs-staging.vmware.com/en/Cluster-Essentials-for-VMware-Tanzu/1.6/cluster-essentials/deploy.html)    | n/a       |
+| 1.5    | [Staging 1.5](https://docs-staging.vmware.com/en/Cluster-Essentials-for-VMware-Tanzu/1.5/cluster-essentials/deploy.html)    | [Production 1.5](https://docs.vmware.com/en/Cluster-Essentials-for-VMware-Tanzu/1.5/cluster-essentials/deploy.html)       |
+| 1.4    | [Staging 1.4](https://docs-staging.vmware.com/en/Cluster-Essentials-for-VMware-Tanzu/1.4/cluster-essentials/deploy.html)    | [Production 1.4](https://docs.vmware.com/en/Cluster-Essentials-for-VMware-Tanzu/1.4/cluster-essentials/deploy.html)       |
 | 1.3    | [Staging 1.3](https://docs-staging.vmware.com/en/Cluster-Essentials-for-VMware-Tanzu/1.3/cluster-essentials/GUID-deploy.html)    | [Production 1.3](https://docs.vmware.com/en/Cluster-Essentials-for-VMware-Tanzu/1.3/cluster-essentials/GUID-deploy.html)       |
 | 1.2    | [Staging 1.2](https://docs-staging.vmware.com/en/Cluster-Essentials-for-VMware-Tanzu/1.2/cluster-essentials/GUID-deploy.html)    | [Production 1.2](https://docs.vmware.com/en/Cluster-Essentials-for-VMware-Tanzu/1.2/cluster-essentials/GUID-deploy.html)       |
 | 1.1   | [Staging 1.1](https://docs-staging.vmware.com/en/Cluster-Essentials-for-VMware-Tanzu/1.1/cluster-essentials/GUID-deploy.html)    | [Production 1.1](https://docs.vmware.com/en/Cluster-Essentials-for-VMware-Tanzu/1.1/cluster-essentials/GUID-deploy.html)       |
