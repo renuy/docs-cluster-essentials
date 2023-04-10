@@ -10,7 +10,7 @@ providers:
 - Azure Kubernetes Service
 - Amazon Elastic Kubernetes Service
 - Google Kubernetes Engine
-- Red Hat OpenShift v4.11 running on vSphere and baremetal clusters
+- Red Hat OpenShift v4.11 or v4.12 running on vSphere and baremetal clusters
 - Minikube
 - Kind
 
