@@ -137,7 +137,9 @@ Configure and run `install.sh`, which will install `kapp-controller` and `secret
     
     Where `TANZU-NET-USER` and `TANZU-NET-PASSWORD` are your credentials for VMware Tanzu Network.
 
-- For air-gapped installation, run:
+- For air-gapped installation: 
+
+    Upload the previously downloaded bundle to the air gapped registry by running:
 
     ```console
     $ IMGPKG_REGISTRY_HOSTNAME=MY-REGISTRY \
@@ -184,7 +186,9 @@ Configure and run `install.bat`, which will install `kapp-controller` and `secre
 
     Where `TANZU-NET-USER` and `TANZU-NET-PASSWORD` are your credentials for VMware Tanzu Network.
 
-- For air-gapped installation, run:
+- For air-gapped installation: 
+
+    Upload the previously downloaded bundle to the air gapped registry by running:
 
     ```console
     cd tanzu-cluster-essentials
