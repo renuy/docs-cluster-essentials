@@ -57,7 +57,7 @@ For all other clusters, install Cluster Essentials using the following steps.
 
     Where `DOWNLOADED-CLUSTER-ESSENTIALS-BUNDLE` is the name of the bundle you downloaded.
 
-1. Download the artifacts and image copy:
+1. For air-gapped installation, download the bundle:
 
     On macOS or Linux:
 
