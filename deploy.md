@@ -62,10 +62,12 @@ For all other clusters, install Cluster Essentials using the following steps.
     On macOS or Linux:
 
     ```console
+    $ cd tanzu-cluster-essentials
+
     $ IMGPKG_REGISTRY_HOSTNAME=registry.tanzu.vmware.com \
       IMGPKG_REGISTRY_USERNAME=TANZUNET-REGISTRY-USERNAME \
       IMGPKG_REGISTRY_PASSWORD=TANZUNET-REGISTRY-PASSWORD \
-      imgpkg copy \
+      ./imgpkg copy \
         -b registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:79abddbc3b49b44fc368fede0dab93c266ff7c1fe305e2d555ed52d00361b446 \
         --to-tar cluster-essentials-bundle-1.6.0.tar \
         --include-non-distributable-layers
@@ -142,10 +144,12 @@ Configure and run `install.sh`, which will install `kapp-controller` and `secret
     Upload the previously downloaded bundle to the air gapped registry by running:
 
     ```console
+    $ cd tanzu-cluster-essentials
+
     $ IMGPKG_REGISTRY_HOSTNAME=MY-REGISTRY \
       IMGPKG_REGISTRY_USERNAME=MY-REGISTRY-USER \
       IMGPKG_REGISTRY_PASSWORD=MY-REGISTRY-PASSWORD \
-      imgpkg copy \
+      ./imgpkg copy \
         --tar cluster-essentials-bundle-1.6.0.tar \
         --to-repo MY-REGISTRY/cluster-essentials-bundle \
         --include-non-distributable-layers \
