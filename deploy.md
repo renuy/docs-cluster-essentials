@@ -141,7 +141,7 @@ Configure and run `install.sh`, which will install `kapp-controller` and `secret
 
 - For air-gapped installation: 
 
-    Upload the previously downloaded bundle to the air gapped registry by running:
+    Upload the previously downloaded bundle to the air gapped registry and install Cluster Essentials by running:
 
     ```console
     $ cd tanzu-cluster-essentials
@@ -192,7 +192,7 @@ Configure and run `install.bat`, which will install `kapp-controller` and `secre
 
 - For air-gapped installation: 
 
-    Upload the previously downloaded bundle to the air gapped registry by running:
+    Upload the previously downloaded bundle to the air gapped registry and install Cluster Essentials by running:
 
     ```console
     cd tanzu-cluster-essentials
