@@ -1,6 +1,6 @@
-# Deploying Cluster Essentials v1.6
+# Deploying Cluster Essentials v1.6.1
 
-This topic tells you how to install, upgrade, and uninstall Cluster Essentials v1.6.
+This topic tells you how to install, upgrade, and uninstall Cluster Essentials v1.6.1.
 
 ## <a id='supported-kube'></a> Supported Kubernetes versions
 
@@ -34,9 +34,9 @@ For all other clusters, install Cluster Essentials using the following steps.
 
 1.  Select a download according to your Kubernetes provider and operating system:
 
-    - For macOS, download `tanzu-cluster-essentials-darwin-amd64-1.6.0.tgz`.
-    - For Linux, download `tanzu-cluster-essentials-linux-amd64-1.6.0.tgz`.
-    - For Windows, download `tanzu-cluster-essentials-windows-amd64-1.6.0.tgz`.
+    - For macOS, download `tanzu-cluster-essentials-darwin-amd64-1.6.1.tgz`.
+    - For Linux, download `tanzu-cluster-essentials-linux-amd64-1.6.1.tgz`.
+    - For Windows, download `tanzu-cluster-essentials-windows-amd64-1.6.1.tgz`.
 
 1. Unpack the TAR file into the `tanzu-cluster-essentials` directory:
 
@@ -68,8 +68,8 @@ For all other clusters, install Cluster Essentials using the following steps.
       IMGPKG_REGISTRY_USERNAME=TANZUNET-REGISTRY-USERNAME \
       IMGPKG_REGISTRY_PASSWORD=TANZUNET-REGISTRY-PASSWORD \
       ./imgpkg copy \
-        -b registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:54e516b5d088198558d23cababb3f907cd8073892cacfb2496bb9d66886efe15 \
-        --to-tar cluster-essentials-bundle-1.6.0.tar \
+        -b registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:2f538b69c866023b7d408cce6f0624c5662ee0703d8492e623b7fce10b6f840b \
+        --to-tar cluster-essentials-bundle-1.6.1.tar \
         --include-non-distributable-layers
     ```
 
@@ -83,8 +83,8 @@ For all other clusters, install Cluster Essentials using the following steps.
     set /p IMGPKG_REGISTRY_PASSWORD=password:
     :: Interactively enter TANZUNET-REGISTRY-PASSWORD
     imgpkg copy ^
-      -b registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:54e516b5d088198558d23cababb3f907cd8073892cacfb2496bb9d66886efe15 ^
-      --to-tar cluster-essentials-bundle-1.6.0.tar ^
+      -b registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:2f538b69c866023b7d408cce6f0624c5662ee0703d8492e623b7fce10b6f840b ^
+      --to-tar cluster-essentials-bundle-1.6.1.tar ^
       --include-non-distributable-layers
     ```
 
@@ -129,7 +129,7 @@ Configure and run `install.sh`, which will install `kapp-controller` and `secret
 - For online installation, run:
 
     ```console
-    export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:54e516b5d088198558d23cababb3f907cd8073892cacfb2496bb9d66886efe15
+    export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:2f538b69c866023b7d408cce6f0624c5662ee0703d8492e623b7fce10b6f840b
     export INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
     export INSTALL_REGISTRY_USERNAME=TANZU-NET-USER
     export INSTALL_REGISTRY_PASSWORD=TANZU-NET-PASSWORD
@@ -150,12 +150,12 @@ Configure and run `install.sh`, which will install `kapp-controller` and `secret
       IMGPKG_REGISTRY_USERNAME=MY-REGISTRY-USER \
       IMGPKG_REGISTRY_PASSWORD=MY-REGISTRY-PASSWORD \
       ./imgpkg copy \
-        --tar cluster-essentials-bundle-1.6.0.tar \
+        --tar cluster-essentials-bundle-1.6.1.tar \
         --to-repo MY-REGISTRY/cluster-essentials-bundle \
         --include-non-distributable-layers \
         --registry-ca-cert-path CA_PATH
 
-    $ INSTALL_BUNDLE=MY-REGISTRY/cluster-essentials-bundle@sha256:54e516b5d088198558d23cababb3f907cd8073892cacfb2496bb9d66886efe15 \
+    $ INSTALL_BUNDLE=MY-REGISTRY/cluster-essentials-bundle@sha256:2f538b69c866023b7d408cce6f0624c5662ee0703d8492e623b7fce10b6f840b \
       INSTALL_REGISTRY_HOSTNAME=MY-REGISTRY \
       INSTALL_REGISTRY_USERNAME=MY-REGISTRY-USER \
       INSTALL_REGISTRY_PASSWORD=MY-REGISTRY-PASSWORD \
@@ -179,7 +179,7 @@ Configure and run `install.bat`, which will install `kapp-controller` and `secre
     ```console
     cd tanzu-cluster-essentials
 
-    set INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:54e516b5d088198558d23cababb3f907cd8073892cacfb2496bb9d66886efe15
+    set INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:2f538b69c866023b7d408cce6f0624c5662ee0703d8492e623b7fce10b6f840b
     set INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
     set INSTALL_REGISTRY_USERNAME=TANZU-NET-USER
     set /p INSTALL_REGISTRY_PASSWORD=password:
@@ -202,12 +202,12 @@ Configure and run `install.bat`, which will install `kapp-controller` and `secre
     set IMGPKG_REGISTRY_PASSWORD=password:
     :: Interactive enter MY-REGISTRY-PASSWORD
     imgpkg copy ^
-      --tar cluster-essentials-bundle-1.6.0.tar ^
+      --tar cluster-essentials-bundle-1.6.1.tar ^
       --to-repo MY-REGISTRY/cluster-essentials-bundle ^
       --include-non-distributable-layers ^
       --registry-ca-cert-path CA_PATH
 
-    set INSTALL_BUNDLE=MY-REGISTRY/cluster-essentials-bundle@sha256:54e516b5d088198558d23cababb3f907cd8073892cacfb2496bb9d66886efe15
+    set INSTALL_BUNDLE=MY-REGISTRY/cluster-essentials-bundle@sha256:2f538b69c866023b7d408cce6f0624c5662ee0703d8492e623b7fce10b6f840b
     set INSTALL_REGISTRY_HOSTNAME=MY-REGISTRY
     set INSTALL_REGISTRY_USERNAME=MY-REGISTRY-USER
     set /p INSTALL_REGISTRY_PASSWORD=password:
@@ -241,7 +241,7 @@ Configure and run `install.bat`, which will install `kapp-controller` and `secre
 
 Cluster Essentials components (such as `kapp-controller` and `secretgen-controller`) cannot be upgraded on clusters provisioned using VMware Tanzu Kubernetes Grid, Tanzu Community Edition, and VMware Tanzu Mission Control. 
 
-For all other clusters, if you already have Cluster Essentials 1.0+ installed on your target cluster, you can upgrade to Cluster Essentials 1.6 using the following steps. Running this upgrade will update the `kapp-controller` version on your cluster to `v0.46.1` and `secretgen-controller` version to `v0.14.8`.
+For all other clusters, if you already have Cluster Essentials 1.0+ installed on your target cluster, you can upgrade to Cluster Essentials 1.6.1 using the following steps. Running this upgrade will update the `kapp-controller` version on your cluster to `v0.46.2` and `secretgen-controller` version to `v0.14.10`.
 
 1. Follow the steps above to [Download artifacts from Tanzu Network](#download) and [Set Kubernetes cluster context](#cluster-context)
 
@@ -252,7 +252,7 @@ For all other clusters, if you already have Cluster Essentials 1.0+ installed on
     ```console
     cd $HOME/tanzu-cluster-essentials
 
-    export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:54e516b5d088198558d23cababb3f907cd8073892cacfb2496bb9d66886efe15
+    export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:2f538b69c866023b7d408cce6f0624c5662ee0703d8492e623b7fce10b6f840b
     export INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
     export INSTALL_REGISTRY_USERNAME=TANZU-NET-USER
     export INSTALL_REGISTRY_PASSWORD=TANZU-NET-PASSWORD
@@ -265,7 +265,7 @@ For all other clusters, if you already have Cluster Essentials 1.0+ installed on
     ```console
     cd tanzu-cluster-essentials
 
-    set INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:54e516b5d088198558d23cababb3f907cd8073892cacfb2496bb9d66886efe15
+    set INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:2f538b69c866023b7d408cce6f0624c5662ee0703d8492e623b7fce10b6f840b
     set INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
     set INSTALL_REGISTRY_USERNAME=TANZU-NET-USER
     set /p INSTALL_REGISTRY_PASSWORD=password:
