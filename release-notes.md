@@ -2,6 +2,13 @@
 
 This topic contains release notes for Cluster Essentials for VMware Tanzu. A new minor release for Cluster Essentials is publish every quarter. Monthly patch releases are published to address critical bugs and CVEs, if there are any.
 
+## <a id='1-5-5'></a> v1.5.5
+
+**Release Date**: October 3, 2023
+
+### <a id='1-5-5-resolved-issues'></a> Resolved Issues
+* Updating **kapp-controller to v0.45.3_vmware.2**. This patch release addresses CVEs identified in v1.5.3.
+
 ## <a id='1-5-4'></a> v1.5.4
 
 **Release Date**: August 31, 2023
