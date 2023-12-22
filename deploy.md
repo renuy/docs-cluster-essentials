@@ -109,19 +109,19 @@ For all other clusters, install Cluster Essentials using the following steps.
 #### <a id='customer-cert'></a>Custom certificate (optional)
 If your registry needs a custom certificate, you must [load that configuration](https://carvel.dev/kapp-controller/docs/v0.41.0/controller-config/) into the cluster before installing `kapp-controller`. If your registry uses a public certificate, this step is not required.
 
-    1. Create the `kapp-controller` namespace:
+1. Create the `kapp-controller` namespace:
 
-    ```console
-    kubectl create namespace kapp-controller
-    ```
+```console
+kubectl create namespace kapp-controller
+```
 
-    2.  Create a configuration secret by using the registry's `ca.crt` stored on local disk:
+2.  Create a configuration secret by using the registry's `ca.crt` stored on local disk:
 
-    ```console
-    kubectl create secret generic kapp-controller-config \
-       --namespace kapp-controller \
-       --from-file caCerts=ca.crt
-    ```
+```console
+kubectl create secret generic kapp-controller-config \
+   --namespace kapp-controller \
+   --from-file caCerts=ca.crt
+```
 
 #### <a id='install-unix'></a> On macOS or Linux
 
