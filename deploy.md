@@ -1,6 +1,6 @@
-# Deploying Cluster Essentials v1.6.4
+# Deploying Cluster Essentials v1.6.5
 
-This topic tells you how to install, upgrade, and uninstall Cluster Essentials v1.6.4.
+This topic tells you how to install, upgrade, and uninstall Cluster Essentials v1.6.5.
 
 ## <a id='supported-kube'></a> Supported Kubernetes versions
 
@@ -34,9 +34,9 @@ For all other clusters, install Cluster Essentials using the following steps.
 
 1.  Select a download according to your Kubernetes provider and operating system:
 
-    - For macOS, download `tanzu-cluster-essentials-darwin-amd64-1.6.4.tgz`.
-    - For Linux, download `tanzu-cluster-essentials-linux-amd64-1.6.4.tgz`.
-    - For Windows, download `tanzu-cluster-essentials-windows-amd64-1.6.4.tgz`.
+    - For macOS, download `tanzu-cluster-essentials-darwin-amd64-1.6.5.tgz`.
+    - For Linux, download `tanzu-cluster-essentials-linux-amd64-1.6.5.tgz`.
+    - For Windows, download `tanzu-cluster-essentials-windows-amd64-1.6.5.tgz`.
 
 1. Unpack the TAR file into the `tanzu-cluster-essentials` directory:
 
@@ -69,7 +69,7 @@ For all other clusters, install Cluster Essentials using the following steps.
       IMGPKG_REGISTRY_PASSWORD=TANZUNET-REGISTRY-PASSWORD \
       ./imgpkg copy \
         -b registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:52c3c059f4ca4385abe212c71999b3ec221e3bbd900b17c9ab953eff0125594b \
-        --to-tar cluster-essentials-bundle-1.6.4.tar \
+        --to-tar cluster-essentials-bundle-1.6.5.tar \
         --include-non-distributable-layers
     ```
 
@@ -84,7 +84,7 @@ For all other clusters, install Cluster Essentials using the following steps.
     :: Interactively enter TANZUNET-REGISTRY-PASSWORD
     imgpkg copy ^
       -b registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:52c3c059f4ca4385abe212c71999b3ec221e3bbd900b17c9ab953eff0125594b ^
-      --to-tar cluster-essentials-bundle-1.6.4.tar ^
+      --to-tar cluster-essentials-bundle-1.6.5.tar ^
       --include-non-distributable-layers
     ```
 
@@ -106,15 +106,16 @@ For all other clusters, install Cluster Essentials using the following steps.
 
 ### <a id='install'></a> Deploy onto cluster
 
-1. (Optional) If your registry needs a custom certificate, you must [load that configuration](https://carvel.dev/kapp-controller/docs/v0.41.0/controller-config/) into the cluster before installing `kapp-controller`. If your registry uses a public certificate, this step is not required.
+#### <a id='customer-cert'></a>Custom certificate (optional)
+If your registry needs a custom certificate, you must [load that configuration](https://carvel.dev/kapp-controller/docs/v0.41.0/controller-config/) into the cluster before installing `kapp-controller`. If your registry uses a public certificate, this step is not required.
 
-1. Create the `kapp-controller` namespace:
+    1. Create the `kapp-controller` namespace:
 
     ```console
     kubectl create namespace kapp-controller
     ```
 
-1. Create a configuration secret by using the registry's `ca.crt` stored on local disk:
+    2.  Create a configuration secret by using the registry's `ca.crt` stored on local disk:
 
     ```console
     kubectl create secret generic kapp-controller-config \
@@ -150,7 +151,7 @@ Configure and run `install.sh`, which will install `kapp-controller` and `secret
       IMGPKG_REGISTRY_USERNAME=MY-REGISTRY-USER \
       IMGPKG_REGISTRY_PASSWORD=MY-REGISTRY-PASSWORD \
       ./imgpkg copy \
-        --tar cluster-essentials-bundle-1.6.4.tar \
+        --tar cluster-essentials-bundle-1.6.5.tar \
         --to-repo MY-REGISTRY/cluster-essentials-bundle \
         --include-non-distributable-layers \
         --registry-ca-cert-path CA_PATH
@@ -202,7 +203,7 @@ Configure and run `install.bat`, which will install `kapp-controller` and `secre
     set IMGPKG_REGISTRY_PASSWORD=password:
     :: Interactive enter MY-REGISTRY-PASSWORD
     imgpkg copy ^
-      --tar cluster-essentials-bundle-1.6.4.tar ^
+      --tar cluster-essentials-bundle-1.6.5.tar ^
       --to-repo MY-REGISTRY/cluster-essentials-bundle ^
       --include-non-distributable-layers ^
       --registry-ca-cert-path CA_PATH
@@ -241,7 +242,7 @@ Configure and run `install.bat`, which will install `kapp-controller` and `secre
 
 Cluster Essentials components (such as `kapp-controller` and `secretgen-controller`) cannot be upgraded on clusters provisioned using VMware Tanzu Kubernetes Grid, Tanzu Community Edition, and VMware Tanzu Mission Control. 
 
-For all other clusters, if you already have Cluster Essentials 1.0+ installed on your target cluster, you can upgrade to Cluster Essentials 1.6.4 using the following steps. Running this upgrade will update the `kapp-controller` version on your cluster to `v0.46.4` and `secretgen-controller` version to `v0.14.12`.
+For all other clusters, if you already have Cluster Essentials 1.0+ installed on your target cluster, you can upgrade to Cluster Essentials 1.6.5 using the following steps. Running this upgrade will update the `kapp-controller` version on your cluster to `v0.46.5` and `secretgen-controller` version to `v0.14.13`.
 
 1. Follow the steps above to [Download artifacts from Tanzu Network](#download) and [Set Kubernetes cluster context](#cluster-context)
 
