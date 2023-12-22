@@ -1,6 +1,6 @@
-# Deploying Cluster Essentials v1.5.7
+# Deploying Cluster Essentials v1.5.8
 
-This topic tells you how to install, upgrade, and uninstall Cluster Essentials v1.5.7.
+This topic tells you how to install, upgrade, and uninstall Cluster Essentials v1.5.8.
 
 ## <a id='supported-kube'></a> Supported Kubernetes versions
 
@@ -34,9 +34,9 @@ For all other clusters, install Cluster Essentials using the following steps.
 
 1.  Select a download according to your Kubernetes provider and operating system:
 
-    - For macOS, download `tanzu-cluster-essentials-darwin-amd64-1.5.7.tgz`.
-    - For Linux, download `tanzu-cluster-essentials-linux-amd64-1.5.7.tgz`.
-    - For Windows, download `tanzu-cluster-essentials-windows-amd64-1.5.7.tgz`.
+    - For macOS, download `tanzu-cluster-essentials-darwin-amd64-1.5.8.tgz`.
+    - For Linux, download `tanzu-cluster-essentials-linux-amd64-1.5.8.tgz`.
+    - For Windows, download `tanzu-cluster-essentials-windows-amd64-1.5.8.tgz`.
 
 1. Unpack the TAR file into the `tanzu-cluster-essentials` directory:
 
@@ -114,14 +114,14 @@ For all other clusters, install Cluster Essentials using the following steps.
           IMGPKG_REGISTRY_PASSWORD=TANZUNET-REGISTRY-PASSWORD \
           imgpkg copy \
             -b registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:ab1b005efe13bee39555fc827d962a6d0012b2ef1cfa1aa5f22df36aa733f5a1 \
-            --to-tar cluster-essentials-bundle-1.5.7.tar \
+            --to-tar cluster-essentials-bundle-1.5.8.tar \
             --include-non-distributable-layers
 
         $ IMGPKG_REGISTRY_HOSTNAME=MY-REGISTRY \
           IMGPKG_REGISTRY_USERNAME=MY-REGISTRY-USER \
           IMGPKG_REGISTRY_PASSWORD=MY-REGISTRY-PASSWORD \
           imgpkg copy \
-            --tar cluster-essentials-bundle-1.5.7.tar \
+            --tar cluster-essentials-bundle-1.5.8.tar \
             --to-repo MY-REGISTRY/cluster-essentials-bundle \
             --include-non-distributable-layers \
             --registry-ca-cert-path CA_PATH
@@ -172,7 +172,7 @@ For all other clusters, install Cluster Essentials using the following steps.
         :: Interactively enter TANZUNET-REGISTRY-PASSWORD
         imgpkg copy ^
           -b registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:ab1b005efe13bee39555fc827d962a6d0012b2ef1cfa1aa5f22df36aa733f5a1 ^
-          --to-tar cluster-essentials-bundle-1.5.7.tar ^
+          --to-tar cluster-essentials-bundle-1.5.8.tar ^
           --include-non-distributable-layers
 
         set IMGPKG_REGISTRY_HOSTNAME=MY-REGISTRY
@@ -180,7 +180,7 @@ For all other clusters, install Cluster Essentials using the following steps.
         set IMGPKG_REGISTRY_PASSWORD=password:
         :: Interactive enter MY-REGISTRY-PASSWORD
         imgpkg copy ^
-          --tar cluster-essentials-bundle-1.5.7.tar ^
+          --tar cluster-essentials-bundle-1.5.8.tar ^
           --to-repo MY-REGISTRY/cluster-essentials-bundle ^
           --include-non-distributable-layers ^
           --registry-ca-cert-path CA_PATH
@@ -219,7 +219,7 @@ For all other clusters, install Cluster Essentials using the following steps.
 
 Cluster Essentials components (such as `kapp-controller` and `secretgen-controller`) cannot be upgraded on clusters provisioned using VMware Tanzu Kubernetes Grid, Tanzu Community Edition, and VMware Tanzu Mission Control. 
 
-For all other clusters, if you already have Cluster Essentials 1.0+ installed on your target cluster, you can upgrade to Cluster Essentials 1.5.7 using the following steps. Running this upgrade will update the `kapp-controller` version on your cluster to `v0.45.5` and `secretgen-controller` version to `v0.14.12`.
+For all other clusters, if you already have Cluster Essentials 1.0+ installed on your target cluster, you can upgrade to Cluster Essentials 1.5.8 using the following steps. Running this upgrade will update the `kapp-controller` version on your cluster to `v0.45.6` and `secretgen-controller` version to `v0.14.13`.
 
 1. Follow the steps above to [Download artifacts from Tanzu Network](#download) and [Set Kubernetes cluster context](#cluster-context)
 
