@@ -96,7 +96,7 @@ For all other clusters, install Cluster Essentials using the following steps.
     - For online installation, run:
 
         ```
-        export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:ab1b005efe13bee39555fc827d962a6d0012b2ef1cfa1aa5f22df36aa733f5a1
+        export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:bf13f7541f4edfb4334ee145a8477610551aa91e786eb1c89dfaf36ec625cedc
         export INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
         export INSTALL_REGISTRY_USERNAME=TANZU-NET-USER
         export INSTALL_REGISTRY_PASSWORD=TANZU-NET-PASSWORD
@@ -113,7 +113,7 @@ For all other clusters, install Cluster Essentials using the following steps.
           IMGPKG_REGISTRY_USERNAME=TANZUNET-REGISTRY-USERNAME \
           IMGPKG_REGISTRY_PASSWORD=TANZUNET-REGISTRY-PASSWORD \
           imgpkg copy \
-            -b registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:ab1b005efe13bee39555fc827d962a6d0012b2ef1cfa1aa5f22df36aa733f5a1 \
+            -b registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:bf13f7541f4edfb4334ee145a8477610551aa91e786eb1c89dfaf36ec625cedc \
             --to-tar cluster-essentials-bundle-1.5.8.tar \
             --include-non-distributable-layers
 
@@ -126,7 +126,7 @@ For all other clusters, install Cluster Essentials using the following steps.
             --include-non-distributable-layers \
             --registry-ca-cert-path CA_PATH
 
-        $ INSTALL_BUNDLE=MY-REGISTRY/cluster-essentials-bundle@sha256:ab1b005efe13bee39555fc827d962a6d0012b2ef1cfa1aa5f22df36aa733f5a1 \
+        $ INSTALL_BUNDLE=MY-REGISTRY/cluster-essentials-bundle@sha256:bf13f7541f4edfb4334ee145a8477610551aa91e786eb1c89dfaf36ec625cedc \
           INSTALL_REGISTRY_HOSTNAME=MY-REGISTRY \
           INSTALL_REGISTRY_USERNAME=MY-REGISTRY-USER \
           INSTALL_REGISTRY_PASSWORD=MY-REGISTRY-PASSWORD \
@@ -150,7 +150,7 @@ For all other clusters, install Cluster Essentials using the following steps.
         ```
         cd tanzu-cluster-essentials
 
-        set INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:ab1b005efe13bee39555fc827d962a6d0012b2ef1cfa1aa5f22df36aa733f5a1
+        set INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:bf13f7541f4edfb4334ee145a8477610551aa91e786eb1c89dfaf36ec625cedc
         set INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
         set INSTALL_REGISTRY_USERNAME=TANZU-NET-USER
         set /p INSTALL_REGISTRY_PASSWORD=password:
@@ -171,7 +171,7 @@ For all other clusters, install Cluster Essentials using the following steps.
         set /p IMGPKG_REGISTRY_PASSWORD=password:
         :: Interactively enter TANZUNET-REGISTRY-PASSWORD
         imgpkg copy ^
-          -b registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:ab1b005efe13bee39555fc827d962a6d0012b2ef1cfa1aa5f22df36aa733f5a1 ^
+          -b registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:bf13f7541f4edfb4334ee145a8477610551aa91e786eb1c89dfaf36ec625cedc ^
           --to-tar cluster-essentials-bundle-1.5.8.tar ^
           --include-non-distributable-layers
 
@@ -185,7 +185,7 @@ For all other clusters, install Cluster Essentials using the following steps.
           --include-non-distributable-layers ^
           --registry-ca-cert-path CA_PATH
 
-        set INSTALL_BUNDLE=MY-REGISTRY/cluster-essentials-bundle@sha256:ab1b005efe13bee39555fc827d962a6d0012b2ef1cfa1aa5f22df36aa733f5a1
+        set INSTALL_BUNDLE=MY-REGISTRY/cluster-essentials-bundle@sha256:bf13f7541f4edfb4334ee145a8477610551aa91e786eb1c89dfaf36ec625cedc
         set INSTALL_REGISTRY_HOSTNAME=MY-REGISTRY
         set INSTALL_REGISTRY_USERNAME=MY-REGISTRY-USER
         set /p INSTALL_REGISTRY_PASSWORD=password:
@@ -229,7 +229,7 @@ For all other clusters, if you already have Cluster Essentials 1.0+ installed on
     ```
     cd $HOME/tanzu-cluster-essentials
 
-    export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:ab1b005efe13bee39555fc827d962a6d0012b2ef1cfa1aa5f22df36aa733f5a1
+    export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:bf13f7541f4edfb4334ee145a8477610551aa91e786eb1c89dfaf36ec625cedc
     export INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
     export INSTALL_REGISTRY_USERNAME=TANZU-NET-USER
     export INSTALL_REGISTRY_PASSWORD=TANZU-NET-PASSWORD
@@ -241,7 +241,7 @@ For all other clusters, if you already have Cluster Essentials 1.0+ installed on
     ```
     cd tanzu-cluster-essentials
 
-    set INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:ab1b005efe13bee39555fc827d962a6d0012b2ef1cfa1aa5f22df36aa733f5a1
+    set INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:bf13f7541f4edfb4334ee145a8477610551aa91e786eb1c89dfaf36ec625cedc
     set INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
     set INSTALL_REGISTRY_USERNAME=TANZU-NET-USER
     set /p INSTALL_REGISTRY_PASSWORD=password:
