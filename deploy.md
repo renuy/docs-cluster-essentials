@@ -68,7 +68,7 @@ For all other clusters, install Cluster Essentials using the following steps.
       IMGPKG_REGISTRY_USERNAME=TANZUNET-REGISTRY-USERNAME \
       IMGPKG_REGISTRY_PASSWORD=TANZUNET-REGISTRY-PASSWORD \
       ./imgpkg copy \
-        -b registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:ca8584ff2ad4a4cf7a376b72e84fd9ad84ac6f38305767cdfb12309581b521f5 \
+        -b registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:c75374a9162b379a05d7852f8d98b6dcb5fe17e706b27bf736cdcdebf25f0804 \
         --to-tar cluster-essentials-bundle-1.7.2.tar \
         --include-non-distributable-layers
     ```
@@ -83,7 +83,7 @@ For all other clusters, install Cluster Essentials using the following steps.
     set /p IMGPKG_REGISTRY_PASSWORD=password:
     :: Interactively enter TANZUNET-REGISTRY-PASSWORD
     imgpkg copy ^
-      -b registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:ca8584ff2ad4a4cf7a376b72e84fd9ad84ac6f38305767cdfb12309581b521f5 ^
+      -b registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:c75374a9162b379a05d7852f8d98b6dcb5fe17e706b27bf736cdcdebf25f0804 ^
       --to-tar cluster-essentials-bundle-1.7.2.tar ^
       --include-non-distributable-layers
     ```
@@ -129,7 +129,7 @@ Configure and run `install.sh`, which will install `kapp-controller` and `secret
 - For online installation, run:
 
     ```console
-    export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:ca8584ff2ad4a4cf7a376b72e84fd9ad84ac6f38305767cdfb12309581b521f5
+    export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:c75374a9162b379a05d7852f8d98b6dcb5fe17e706b27bf736cdcdebf25f0804
     export INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
     export INSTALL_REGISTRY_USERNAME=TANZU-NET-USER
     export INSTALL_REGISTRY_PASSWORD=TANZU-NET-PASSWORD
@@ -155,7 +155,7 @@ Configure and run `install.sh`, which will install `kapp-controller` and `secret
         --include-non-distributable-layers \
         --registry-ca-cert-path CA_PATH
 
-    $ INSTALL_BUNDLE=MY-REGISTRY/cluster-essentials-bundle@sha256:ca8584ff2ad4a4cf7a376b72e84fd9ad84ac6f38305767cdfb12309581b521f5 \
+    $ INSTALL_BUNDLE=MY-REGISTRY/cluster-essentials-bundle@sha256:c75374a9162b379a05d7852f8d98b6dcb5fe17e706b27bf736cdcdebf25f0804 \
       INSTALL_REGISTRY_HOSTNAME=MY-REGISTRY \
       INSTALL_REGISTRY_USERNAME=MY-REGISTRY-USER \
       INSTALL_REGISTRY_PASSWORD=MY-REGISTRY-PASSWORD \
@@ -179,7 +179,7 @@ Configure and run `install.bat`, which will install `kapp-controller` and `secre
     ```console
     cd tanzu-cluster-essentials
 
-    set INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:ca8584ff2ad4a4cf7a376b72e84fd9ad84ac6f38305767cdfb12309581b521f5
+    set INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:c75374a9162b379a05d7852f8d98b6dcb5fe17e706b27bf736cdcdebf25f0804
     set INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
     set INSTALL_REGISTRY_USERNAME=TANZU-NET-USER
     set /p INSTALL_REGISTRY_PASSWORD=password:
@@ -207,7 +207,7 @@ Configure and run `install.bat`, which will install `kapp-controller` and `secre
       --include-non-distributable-layers ^
       --registry-ca-cert-path CA_PATH
 
-    set INSTALL_BUNDLE=MY-REGISTRY/cluster-essentials-bundle@sha256:ca8584ff2ad4a4cf7a376b72e84fd9ad84ac6f38305767cdfb12309581b521f5
+    set INSTALL_BUNDLE=MY-REGISTRY/cluster-essentials-bundle@sha256:c75374a9162b379a05d7852f8d98b6dcb5fe17e706b27bf736cdcdebf25f0804
     set INSTALL_REGISTRY_HOSTNAME=MY-REGISTRY
     set INSTALL_REGISTRY_USERNAME=MY-REGISTRY-USER
     set /p INSTALL_REGISTRY_PASSWORD=password:
@@ -252,7 +252,7 @@ For all other clusters, if you already have Cluster Essentials 1.0+ installed on
     ```console
     cd $HOME/tanzu-cluster-essentials
 
-    export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:ca8584ff2ad4a4cf7a376b72e84fd9ad84ac6f38305767cdfb12309581b521f5
+    export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:c75374a9162b379a05d7852f8d98b6dcb5fe17e706b27bf736cdcdebf25f0804
     export INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
     export INSTALL_REGISTRY_USERNAME=TANZU-NET-USER
     export INSTALL_REGISTRY_PASSWORD=TANZU-NET-PASSWORD
@@ -265,7 +265,7 @@ For all other clusters, if you already have Cluster Essentials 1.0+ installed on
     ```console
     cd tanzu-cluster-essentials
 
-    set INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:ca8584ff2ad4a4cf7a376b72e84fd9ad84ac6f38305767cdfb12309581b521f5
+    set INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:c75374a9162b379a05d7852f8d98b6dcb5fe17e706b27bf736cdcdebf25f0804
     set INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
     set INSTALL_REGISTRY_USERNAME=TANZU-NET-USER
     set /p INSTALL_REGISTRY_PASSWORD=password:
