@@ -312,13 +312,11 @@ To rollback to the previously installed version, follow the previous version of 
 
 ## <a id='troubleshoot'></a> Troubleshoot
 
-### <a id='troubleshoot-install'></a> Troubleshoot installing Cluster Essentials
+This section describes how to troubleshoot installing Cluster Essentials.
 
-This topic tells you how to troubleshoot installing Cluster Essentials.
+### <a id='psa-enforced-cluster'></a> Cluster Essentails installation fails on PSA enforced cluster
 
-### <a id='psa-enforced-cluster'></a> Cluster Essentails installation fails on PSA enforced cluster.
-
-If Pod Security Admission (PSA) is enforced on the Kubernetes cluster (e.g. TKGs with vSphere7 and Kubernetes version >=1.26), following error can be observed:
+You see the following error if Pod Security Admission (PSA) is enforced on the Kubernetes cluster, for example, TKGs with vSphere7 and Kubernetes version and later:
 
 ```console
 kapp: Error: waiting on reconcile deployment/kapp-controller (apps/v1) namespace: kapp-controller:
@@ -327,17 +325,7 @@ Finished unsuccessfully (Deployment is not progressing: ProgressDeadlineExceeded
 
 **Solution**
 
-In this case, modify `install.sh` with the below steps and then rerun `install.sh`.
-
-```console
-echo "## Deploying kapp-controller"
-./kapp deploy -a kapp-controller -n $ns_name -f <(./ytt -f ./bundle/kapp-controller/config/ -f ./bundle/registry-creds/ --data-values-env YTT --data-value-yaml kappController.deployment.concurrency=10 | ./kbld -f- -f ./bundle/.imgpkg/images.yml) "$@"
-
-echo "## Deploying secretgen-controller"
-./kapp deploy -a secretgen-controller -n $ns_name -f <(./ytt -f ./bundle/secretgen-controller/config/ -f ./bundle/registry-creds/ --data-values-env YTT | ./kbld -f- -f ./bundle/.imgpkg/images.yml) "$@"
-```
-
-with following:
+Edit and rerun `install.sh` with the following script:
 
 ```console
 # Adding an overlay to set the seccompProfile.
