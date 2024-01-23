@@ -325,7 +325,7 @@ Finished unsuccessfully (Deployment is not progressing: ProgressDeadlineExceeded
 
 **Solution**
 
-Edit and rerun `install.sh` with the following script:
+Edit `install.sh` with the following content and rerun the script:
 
 ```console
 # Adding an overlay to set the seccompProfile.
