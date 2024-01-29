@@ -316,7 +316,7 @@ This section describes how to troubleshoot installing Cluster Essentials.
 
 ### <a id='psa-enforced-cluster'></a> Cluster Essentails installation fails on PSA enforced cluster
 
-You see the following error if Pod Security Admission (PSA) is enforced on the Kubernetes cluster, for example, TKGs with vSphere7 and Kubernetes version and later:
+You see the following error if Pod Security Admission (PSA) is enforced on the Kubernetes cluster, for example, TKGs with vSphere7 and Kubernetes version 1.26 and later:
 
 ```console
 kapp: Error: waiting on reconcile deployment/kapp-controller (apps/v1) namespace: kapp-controller:
