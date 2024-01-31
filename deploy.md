@@ -325,29 +325,41 @@ Finished unsuccessfully (Deployment is not progressing: ProgressDeadlineExceeded
 
 **Solution**
 
-Edit `install.sh` with the following content and rerun the script:
+1. Locate the following code in `install.sh`:
 
-```console
-# Adding an overlay to set the seccompProfile.
-cat > "bundle/overlay.yaml" <<EOF
-#@ load("@ytt:overlay", "overlay")
+    ```console
+    echo "## Deploying kapp-controller"
+    ./kapp deploy -a kapp-controller -n $ns_name -f <(./ytt -f ./bundle/kapp-controller/config/ -f ./bundle/registry-creds/ --data-values-env YTT --data-value-yaml kappController.deployment.concurrency=10 | ./kbld -f- -f ./bundle/.imgpkg/images.yml) "$@"
 
-#@overlay/match by=overlay.subset({"kind":"Deployment"})
----
-spec:
-  template:
+    echo "## Deploying secretgen-controller"
+    ./kapp deploy -a secretgen-controller -n $ns_name -f <(./ytt -f ./bundle/secretgen-controller/config/ -f ./bundle/registry-creds/ --data-values-env YTT | ./kbld -f- -f ./bundle/.imgpkg/images.yml) "$@"
+    ```
+
+1. Replace the code located in step 1 with the following:
+
+    ```console
+    # Adding an overlay to set the seccompProfile.
+    cat > "bundle/overlay.yaml" <<EOF
+    #@ load("@ytt:overlay", "overlay")
+
+    #@overlay/match by=overlay.subset({"kind":"Deployment"})
+    ---
     spec:
-      containers:
-      #@overlay/match by=overlay.all, expects="0+"
-      #@overlay/match-child-defaults missing_ok=True
-      - securityContext:
-          seccompProfile:
-            type: RuntimeDefault
-EOF
+      template:
+        spec:
+          containers:
+          #@overlay/match by=overlay.all, expects="0+"
+          #@overlay/match-child-defaults missing_ok=True
+          - securityContext:
+              seccompProfile:
+                type: RuntimeDefault
+    EOF
 
-echo "## Deploying kapp-controller"
-./kapp deploy -a kapp-controller -n $ns_name -f <(./ytt -f ./bundle/kapp-controller/config/ -f ./bundle/registry-creds/ --data-values-env YTT --data-value-yaml kappController.deployment.concurrency=10 -f ./bundle/overlay.yaml | ./kbld -f- -f ./bundle/.imgpkg/images.yml) "$@"
+    echo "## Deploying kapp-controller"
+    ./kapp deploy -a kapp-controller -n $ns_name -f <(./ytt -f ./bundle/kapp-controller/config/ -f ./bundle/registry-creds/ --data-values-env YTT --data-value-yaml kappController.deployment.concurrency=10 -f ./bundle/overlay.yaml | ./kbld -f- -f ./bundle/.imgpkg/images.yml) "$@"
 
-echo "## Deploying secretgen-controller"
-./kapp deploy -a secretgen-controller -n $ns_name -f <(./ytt -f ./bundle/secretgen-controller/config/ -f ./bundle/registry-creds/ --data-values-env YTT -f ./bundle/overlay.yaml | ./kbld -f- -f ./bundle/.imgpkg/images.yml) "$@"
-```
+    echo "## Deploying secretgen-controller"
+    ./kapp deploy -a secretgen-controller -n $ns_name -f <(./ytt -f ./bundle/secretgen-controller/config/ -f ./bundle/registry-creds/ --data-values-env YTT -f ./bundle/overlay.yaml | ./kbld -f- -f ./bundle/.imgpkg/images.yml) "$@"
+    ```
+
+1. Rerun `install.sh`.
