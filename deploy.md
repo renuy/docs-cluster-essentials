@@ -1,6 +1,6 @@
-# Deploying Cluster Essentials v1.8
+# Deploying Cluster Essentials v1.9
 
-This topic tells you how to install, upgrade, and uninstall Cluster Essentials v1.8.
+This topic tells you how to install, upgrade, and uninstall Cluster Essentials v1.9.
 
 ## <a id='supported-kube'></a> Supported Kubernetes versions
 
@@ -34,9 +34,9 @@ For all other clusters, install Cluster Essentials using the following steps.
 
 1.  Select a download according to your Kubernetes provider and operating system:
 
-    - For macOS, download `tanzu-cluster-essentials-darwin-amd64-1.8.0.tgz`.
-    - For Linux, download `tanzu-cluster-essentials-linux-amd64-1.8.0.tgz`.
-    - For Windows, download `tanzu-cluster-essentials-windows-amd64-1.8.0.tgz`.
+    - For macOS, download `tanzu-cluster-essentials-darwin-amd64-1.9.0.tgz`.
+    - For Linux, download `tanzu-cluster-essentials-linux-amd64-1.9.0.tgz`.
+    - For Windows, download `tanzu-cluster-essentials-windows-amd64-1.9.0.tgz`.
 
 1. Unpack the TAR file into the `tanzu-cluster-essentials` directory:
 
@@ -69,7 +69,7 @@ For all other clusters, install Cluster Essentials using the following steps.
       IMGPKG_REGISTRY_PASSWORD=TANZUNET-REGISTRY-PASSWORD \
       ./imgpkg copy \
         -b registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:8b4c5b575a015c7490b67329b14e9ca160753b047ba411e937af0f6d317e1596 \
-        --to-tar cluster-essentials-bundle-1.8.0.tar \
+        --to-tar cluster-essentials-bundle-1.9.0.tar \
         --include-non-distributable-layers
     ```
 
@@ -84,7 +84,7 @@ For all other clusters, install Cluster Essentials using the following steps.
     :: Interactively enter TANZUNET-REGISTRY-PASSWORD
     imgpkg copy ^
       -b registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:8b4c5b575a015c7490b67329b14e9ca160753b047ba411e937af0f6d317e1596 ^
-      --to-tar cluster-essentials-bundle-1.8.0.tar ^
+      --to-tar cluster-essentials-bundle-1.9.0.tar ^
       --include-non-distributable-layers
     ```
 
@@ -150,7 +150,7 @@ Configure and run `install.sh`, which will install `kapp-controller` and `secret
       IMGPKG_REGISTRY_USERNAME=MY-REGISTRY-USER \
       IMGPKG_REGISTRY_PASSWORD=MY-REGISTRY-PASSWORD \
       ./imgpkg copy \
-        --tar cluster-essentials-bundle-1.8.0.tar \
+        --tar cluster-essentials-bundle-1.9.0.tar \
         --to-repo MY-REGISTRY/cluster-essentials-bundle \
         --include-non-distributable-layers \
         --registry-ca-cert-path CA_PATH
@@ -202,7 +202,7 @@ Configure and run `install.bat`, which will install `kapp-controller` and `secre
     set IMGPKG_REGISTRY_PASSWORD=password:
     :: Interactive enter MY-REGISTRY-PASSWORD
     imgpkg copy ^
-      --tar cluster-essentials-bundle-1.8.0.tar ^
+      --tar cluster-essentials-bundle-1.9.0.tar ^
       --to-repo MY-REGISTRY/cluster-essentials-bundle ^
       --include-non-distributable-layers ^
       --registry-ca-cert-path CA_PATH
@@ -241,7 +241,7 @@ Configure and run `install.bat`, which will install `kapp-controller` and `secre
 
 Cluster Essentials components (such as `kapp-controller` and `secretgen-controller`) cannot be upgraded on clusters provisioned using VMware Tanzu Kubernetes Grid, Tanzu Community Edition, and VMware Tanzu Mission Control. 
 
-For all other clusters, if you already have Cluster Essentials 1.0+ installed on your target cluster, you can upgrade to Cluster Essentials 1.8 using the following steps. Running this upgrade will update the `kapp-controller` version on your cluster to `v0.50.0` and `secretgen-controller` version to `v0.16.1`.
+For all other clusters, if you already have Cluster Essentials 1.0+ installed on your target cluster, you can upgrade to Cluster Essentials 1.9 using the following steps. Running this upgrade will update the `kapp-controller` version on your cluster to `v0.50.0` and `secretgen-controller` version to `v0.16.1`.
 
 1. Follow the steps above to [Download artifacts from Tanzu Network](#download) and [Set Kubernetes cluster context](#cluster-context)
 
