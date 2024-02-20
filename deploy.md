@@ -16,7 +16,7 @@ providers:
 
 ### <a id='supported-platforms'></a> Supported Platforms
 
-The Cluster Essentials install script can only be run on amd64 CPUs with MacOS, Windows or Linux. 
+The Cluster Essentials install script can only be run on AMD64 &nbsp;CPUs with macOS, Windows or Linux. 
 
 ## <a id='install'></a> Install
 
