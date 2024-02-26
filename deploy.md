@@ -1,6 +1,6 @@
-# Deploying Cluster Essentials v1.5.9
+# Deploying Cluster Essentials v1.5.10
 
-This topic tells you how to install, upgrade, and uninstall Cluster Essentials v1.5.9.
+This topic tells you how to install, upgrade, and uninstall Cluster Essentials v1.5.10.
 
 ## <a id='supported-kube'></a> Supported Kubernetes versions
 
@@ -34,9 +34,9 @@ For all other clusters, install Cluster Essentials using the following steps.
 
 1.  Select a download according to your Kubernetes provider and operating system:
 
-    - For macOS, download `tanzu-cluster-essentials-darwin-amd64-1.5.9.tgz`.
-    - For Linux, download `tanzu-cluster-essentials-linux-amd64-1.5.9.tgz`.
-    - For Windows, download `tanzu-cluster-essentials-windows-amd64-1.5.9.tgz`.
+    - For macOS, download `tanzu-cluster-essentials-darwin-amd64-1.5.10.tgz`.
+    - For Linux, download `tanzu-cluster-essentials-linux-amd64-1.5.10.tgz`.
+    - For Windows, download `tanzu-cluster-essentials-windows-amd64-1.5.10.tgz`.
 
 1. Unpack the TAR file into the `tanzu-cluster-essentials` directory:
 
@@ -96,7 +96,7 @@ For all other clusters, install Cluster Essentials using the following steps.
     - For online installation, run:
 
         ```
-        export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:c8b04af3a082e8a4d2d99e4481d874d4bd63347d47cdb26af7fdd77bdfdb5c50
+        export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:327ba405490d0b7ee26ab34c4010fbf0f121072c6e0e7878e024c6b35cdb4f27
         export INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
         export INSTALL_REGISTRY_USERNAME=TANZU-NET-USER
         export INSTALL_REGISTRY_PASSWORD=TANZU-NET-PASSWORD
@@ -113,20 +113,20 @@ For all other clusters, install Cluster Essentials using the following steps.
           IMGPKG_REGISTRY_USERNAME=TANZUNET-REGISTRY-USERNAME \
           IMGPKG_REGISTRY_PASSWORD=TANZUNET-REGISTRY-PASSWORD \
           imgpkg copy \
-            -b registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:c8b04af3a082e8a4d2d99e4481d874d4bd63347d47cdb26af7fdd77bdfdb5c50 \
-            --to-tar cluster-essentials-bundle-1.5.9.tar \
+            -b registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:327ba405490d0b7ee26ab34c4010fbf0f121072c6e0e7878e024c6b35cdb4f27 \
+            --to-tar cluster-essentials-bundle-1.5.10.tar \
             --include-non-distributable-layers
 
         $ IMGPKG_REGISTRY_HOSTNAME=MY-REGISTRY \
           IMGPKG_REGISTRY_USERNAME=MY-REGISTRY-USER \
           IMGPKG_REGISTRY_PASSWORD=MY-REGISTRY-PASSWORD \
           imgpkg copy \
-            --tar cluster-essentials-bundle-1.5.9.tar \
+            --tar cluster-essentials-bundle-1.5.10.tar \
             --to-repo MY-REGISTRY/cluster-essentials-bundle \
             --include-non-distributable-layers \
             --registry-ca-cert-path CA_PATH
 
-        $ INSTALL_BUNDLE=MY-REGISTRY/cluster-essentials-bundle@sha256:c8b04af3a082e8a4d2d99e4481d874d4bd63347d47cdb26af7fdd77bdfdb5c50 \
+        $ INSTALL_BUNDLE=MY-REGISTRY/cluster-essentials-bundle@sha256:327ba405490d0b7ee26ab34c4010fbf0f121072c6e0e7878e024c6b35cdb4f27 \
           INSTALL_REGISTRY_HOSTNAME=MY-REGISTRY \
           INSTALL_REGISTRY_USERNAME=MY-REGISTRY-USER \
           INSTALL_REGISTRY_PASSWORD=MY-REGISTRY-PASSWORD \
@@ -150,7 +150,7 @@ For all other clusters, install Cluster Essentials using the following steps.
         ```
         cd tanzu-cluster-essentials
 
-        set INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:c8b04af3a082e8a4d2d99e4481d874d4bd63347d47cdb26af7fdd77bdfdb5c50
+        set INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:327ba405490d0b7ee26ab34c4010fbf0f121072c6e0e7878e024c6b35cdb4f27
         set INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
         set INSTALL_REGISTRY_USERNAME=TANZU-NET-USER
         set /p INSTALL_REGISTRY_PASSWORD=password:
@@ -171,8 +171,8 @@ For all other clusters, install Cluster Essentials using the following steps.
         set /p IMGPKG_REGISTRY_PASSWORD=password:
         :: Interactively enter TANZUNET-REGISTRY-PASSWORD
         imgpkg copy ^
-          -b registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:c8b04af3a082e8a4d2d99e4481d874d4bd63347d47cdb26af7fdd77bdfdb5c50 ^
-          --to-tar cluster-essentials-bundle-1.5.9.tar ^
+          -b registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:327ba405490d0b7ee26ab34c4010fbf0f121072c6e0e7878e024c6b35cdb4f27 ^
+          --to-tar cluster-essentials-bundle-1.5.10.tar ^
           --include-non-distributable-layers
 
         set IMGPKG_REGISTRY_HOSTNAME=MY-REGISTRY
@@ -180,12 +180,12 @@ For all other clusters, install Cluster Essentials using the following steps.
         set IMGPKG_REGISTRY_PASSWORD=password:
         :: Interactive enter MY-REGISTRY-PASSWORD
         imgpkg copy ^
-          --tar cluster-essentials-bundle-1.5.9.tar ^
+          --tar cluster-essentials-bundle-1.5.10.tar ^
           --to-repo MY-REGISTRY/cluster-essentials-bundle ^
           --include-non-distributable-layers ^
           --registry-ca-cert-path CA_PATH
 
-        set INSTALL_BUNDLE=MY-REGISTRY/cluster-essentials-bundle@sha256:c8b04af3a082e8a4d2d99e4481d874d4bd63347d47cdb26af7fdd77bdfdb5c50
+        set INSTALL_BUNDLE=MY-REGISTRY/cluster-essentials-bundle@sha256:327ba405490d0b7ee26ab34c4010fbf0f121072c6e0e7878e024c6b35cdb4f27
         set INSTALL_REGISTRY_HOSTNAME=MY-REGISTRY
         set INSTALL_REGISTRY_USERNAME=MY-REGISTRY-USER
         set /p INSTALL_REGISTRY_PASSWORD=password:
@@ -219,7 +219,7 @@ For all other clusters, install Cluster Essentials using the following steps.
 
 Cluster Essentials components (such as `kapp-controller` and `secretgen-controller`) cannot be upgraded on clusters provisioned using VMware Tanzu Kubernetes Grid, Tanzu Community Edition, and VMware Tanzu Mission Control. 
 
-For all other clusters, if you already have Cluster Essentials 1.0+ installed on your target cluster, you can upgrade to Cluster Essentials 1.5.9 using the following steps. Running this upgrade will update the `kapp-controller` version on your cluster to `v0.45.7` and `secretgen-controller` version to `v0.14.14`.
+For all other clusters, if you already have Cluster Essentials 1.0+ installed on your target cluster, you can upgrade to Cluster Essentials 1.5.10 using the following steps. Running this upgrade will update the `kapp-controller` version on your cluster to `v0.45.8` and `secretgen-controller` version to `v0.14.14`.
 
 1. Follow the steps above to [Download artifacts from Tanzu Network](#download) and [Set Kubernetes cluster context](#cluster-context)
 
@@ -229,7 +229,7 @@ For all other clusters, if you already have Cluster Essentials 1.0+ installed on
     ```
     cd $HOME/tanzu-cluster-essentials
 
-    export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:c8b04af3a082e8a4d2d99e4481d874d4bd63347d47cdb26af7fdd77bdfdb5c50
+    export INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:327ba405490d0b7ee26ab34c4010fbf0f121072c6e0e7878e024c6b35cdb4f27
     export INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
     export INSTALL_REGISTRY_USERNAME=TANZU-NET-USER
     export INSTALL_REGISTRY_PASSWORD=TANZU-NET-PASSWORD
@@ -241,7 +241,7 @@ For all other clusters, if you already have Cluster Essentials 1.0+ installed on
     ```
     cd tanzu-cluster-essentials
 
-    set INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:c8b04af3a082e8a4d2d99e4481d874d4bd63347d47cdb26af7fdd77bdfdb5c50
+    set INSTALL_BUNDLE=registry.tanzu.vmware.com/tanzu-cluster-essentials/cluster-essentials-bundle@sha256:327ba405490d0b7ee26ab34c4010fbf0f121072c6e0e7878e024c6b35cdb4f27
     set INSTALL_REGISTRY_HOSTNAME=registry.tanzu.vmware.com
     set INSTALL_REGISTRY_USERNAME=TANZU-NET-USER
     set /p INSTALL_REGISTRY_PASSWORD=password:
