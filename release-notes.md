@@ -4,7 +4,7 @@ This topic contains release notes for Cluster Essentials for VMware Tanzu. A new
 
 ## <a id='1-9'></a> v1.9.0
 
-**Release Date**: 
+**Release Date**: April 30, 2024
 
 ### <a id='1-9-new-features'></a> New features
 - Allow using kapp's --diff-anchored.
