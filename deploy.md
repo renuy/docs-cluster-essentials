@@ -16,7 +16,7 @@ providers:
 
 ### <a id='supported-platforms'></a> Supported Platforms
 
-The Cluster Essentials install script can only be run on AMD64 CPUs with macOS, Windows or Linux. 
+The Cluster Essentials install script can only be run on AMD64 CPUs with macOS, Windows or Linux.
 
 ## <a id='install'></a> Install
 
@@ -104,26 +104,32 @@ For all other clusters, install Cluster Essentials using the following steps.
 
     Where `CONTEXT-NAME` can be retrieved from the outputs of the previous step.
 
-### <a id='install'></a> Deploy onto cluster
+### <a id='install'></a> Deploy onto the cluster
 
-#### <a id='customer-cert'></a>Custom certificate (optional)
-If your registry needs a custom certificate, you must [load that configuration](https://carvel.dev/kapp-controller/docs/v0.41.0/controller-config/) into the cluster before installing `kapp-controller`. If your registry uses a public certificate, this step is not required.
+To deploy to your cluster, create a configuration secret if your registry requires a custom certificate
+then run the script to install Cluster Essentials.
+
+#### <a id='customer-cert'></a>(Optional) Set your custom certificate
+
+If your registry needs a custom certificate, you must [load that configuration](https://carvel.dev/kapp-controller/docs/v0.41.0/controller-config/) into the cluster before installing `kapp-controller`.
+
+If your registry uses a public certificate, these steps are not required.
 
 1. Create the `kapp-controller` namespace:
 
-```console
-kubectl create namespace kapp-controller
-```
+    ```console
+    kubectl create namespace kapp-controller
+    ```
 
 2.  Create a configuration secret by using the registry's `ca.crt` stored on local disk:
 
-```console
-kubectl create secret generic kapp-controller-config \
-   --namespace kapp-controller \
-   --from-file caCerts=ca.crt
-```
+    ```console
+    kubectl create secret generic kapp-controller-config \
+      --namespace kapp-controller \
+      --from-file caCerts=ca.crt
+    ```
 
-#### <a id='install-unix'></a> On macOS or Linux
+#### <a id='install-unix'></a> Deploy using macOS or Linux
 
 Configure and run `install.sh`, which will install `kapp-controller` and `secretgen-controller` on your cluster:
 
@@ -137,10 +143,10 @@ Configure and run `install.sh`, which will install `kapp-controller` and `secret
     cd $HOME/tanzu-cluster-essentials
     ./install.sh --yes
     ```
-    
+
     Where `TANZU-NET-USER` and `TANZU-NET-PASSWORD` are your credentials for VMware Tanzu Network.
 
-- For air-gapped installation: 
+- For air-gapped installation:
 
     Upload the previously downloaded bundle to the air gapped registry and install Cluster Essentials by running:
 
@@ -171,7 +177,7 @@ Configure and run `install.sh`, which will install `kapp-controller` and `secret
     - `MY-REGISTRY-USER` is the user with write access to `MY-REGISTRY`.
     - `MY-REGISTRY-PASSWORD` is the password for `MY-REGISTRY-USER`.
 
-#### <a id='install-windows'></a> On Windows
+#### <a id='install-windows'></a> Deploy using Windows
 
 Configure and run `install.bat`, which will install `kapp-controller` and `secretgen-controller` on your cluster:
 
@@ -191,7 +197,7 @@ Configure and run `install.bat`, which will install `kapp-controller` and `secre
 
     Where `TANZU-NET-USER` and `TANZU-NET-PASSWORD` are your credentials for VMware Tanzu Network.
 
-- For air-gapped installation: 
+- For air-gapped installation:
 
     Upload the previously downloaded bundle to the air gapped registry and install Cluster Essentials by running:
 
@@ -240,7 +246,7 @@ Configure and run `install.bat`, which will install `kapp-controller` and `secre
 
 ## <a id='upgrade'></a> Upgrade
 
-Cluster Essentials components (such as `kapp-controller` and `secretgen-controller`) cannot be upgraded on clusters provisioned using VMware Tanzu Kubernetes Grid, Tanzu Community Edition, and VMware Tanzu Mission Control. 
+Cluster Essentials components (such as `kapp-controller` and `secretgen-controller`) cannot be upgraded on clusters provisioned using VMware Tanzu Kubernetes Grid, Tanzu Community Edition, and VMware Tanzu Mission Control.
 
 For all other clusters, if you already have Cluster Essentials 1.0+ installed on your target cluster, you can upgrade to Cluster Essentials 1.6.9 using the following steps. Running this upgrade will update the `kapp-controller` version on your cluster to `v0.46.9` and `secretgen-controller` version to `v0.14.16`.
 
@@ -249,7 +255,7 @@ For all other clusters, if you already have Cluster Essentials 1.0+ installed on
 1. Configure and run `install.sh`, which will install `kapp-controller` and `secretgen-controller` on your cluster:
 
     On macOS or Linux:
-    
+
     ```console
     cd $HOME/tanzu-cluster-essentials
 
@@ -262,7 +268,7 @@ For all other clusters, if you already have Cluster Essentials 1.0+ installed on
     ```
 
     On Windows (in "Command Prompt" app):
-    
+
     ```console
     cd tanzu-cluster-essentials
 
@@ -277,7 +283,7 @@ For all other clusters, if you already have Cluster Essentials 1.0+ installed on
 
     Where `TANZU-NET-USER` and `TANZU-NET-PASSWORD` are your credentials for VMware Tanzu Network.
 
-1. Follow the [steps above](#cli-install) to optionally install newer versions of the `kapp` and `imgpkg` CLIs to your path 
+1. Follow the [steps above](#cli-install) to optionally install newer versions of the `kapp` and `imgpkg` CLIs to your path
 
 ### <a id='upgrade-rollback'></a> Rollback
 
@@ -296,14 +302,14 @@ To rollback to the previously installed version, follow the previous version of 
 1. Run `uninstall.sh`, which will uninstall `kapp-controller` and `secretgen-controller` on your cluster:
 
     On macOS or Linux:
-    
+
     ```console
     cd $HOME/tanzu-cluster-essentials
     ./uninstall.sh --yes
     ```
 
     On Windows (in "Command Prompt" app):
-    
+
     ```console
     cd tanzu-cluster-essentials
     uninstall.bat
