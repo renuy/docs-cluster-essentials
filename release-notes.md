@@ -7,13 +7,18 @@ This topic contains release notes for Cluster Essentials for VMware Tanzu. A new
 **Release Date**: April 30, 2024
 
 ### <a id='1-7-6-resolved-issues'></a> Resolved Issues
-* Updating **kapp-controller to v0.48.7**. A full list of fixes can be found in the open source [release notes](https://github.com/carvel-dev/kapp-controller/releases/tag/v0.48.7).
-* Updating **secretgen-controller to v0.15.5**.
-* Updating Carvel CLIs
-  * imgpkg to v0.38.4 [release notes](https://github.com/carvel-dev/imgpkg/releases/tag/v0.38.4)
-  * kapp to v0.59.3 [release notes](https://github.com/carvel-dev/kapp/releases/tag/v0.59.3)
-  * kbld to v0.38.3
-  * ytt to v0.46.4
+
+- Updates **kapp-controller to v0.48.7**. For a full list of new features, see the
+  [kapp-controller release notes](https://github.com/carvel-dev/kapp-controller/releases/tag/v0.48.7).
+
+- Updates **secretgen-controller to v0.15.5**. For a full list of new features, see the
+  [secretgen-controller release notes](https://github.com/carvel-dev/secretgen-controller/releases/tag/v0.15.5).
+
+- Updates Carvel CLIs:
+    - imgpkg to v0.38.4. See the [imgpkg release notes](https://github.com/carvel-dev/imgpkg/releases/tag/v0.38.4).
+    - kapp to v0.59.3. See the [kapp release notes](https://github.com/carvel-dev/kapp/releases/tag/v0.59.3).
+    - kbld to v0.38.3. See the [kbld release notes](https://github.com/carvel-dev/kbld/releases/tag/v0.38.3).
+    - ytt to v0.46.4. See the [ytt release notes](https://github.com/carvel-dev/ytt/releases/tag/v0.46.4).
 
 ## <a id='1-7-5'></a> v1.7.5
 
